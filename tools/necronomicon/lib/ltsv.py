@@ -1,9 +1,19 @@
+import re
+
 class Entry:
+    def __coerce(self, val):
+        if re.match(r'^\d+$', val):
+            return int(val)
+        elif re.match(r'^\d+\.\d+$', val):
+            return float(val)
+        else:
+            return str(val)
+
     def __init__(self, line):
         entries = line.split("\t")
         for entry in entries:
             key, val = entry.split(':', 1)
-            setattr(self, key, val)
+            setattr(self, key, self.__coerce(val))
 
     def __str__(self):
         result = "<ltsv.Entry\n"
