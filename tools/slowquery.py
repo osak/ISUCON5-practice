@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+import argparse
 import json
 import sys
 
@@ -63,11 +64,41 @@ def read_entries(log_file):
         raise StopIteration()
 
 
-def main(log_file):
+def parse_file(log_file):
     drop_header(log_file)
-    entries = read_entries(log_file)
-    print json.dumps(list(entries))
+    return read_entries(log_file)
+
+
+def filter_entries(entries, query):
+    entries = entries
+    return filter(lambda entry: eval(query.format(**entry)), entries)
+
+
+def report_sum_and_average(entries, name):
+    total = sum([entry[name] for entry in entries])
+    average = total / float(len(entries))
+    print "average {name} = {average} (total: {total})".format(**vars())
+
+
+def main(log_file, query, n_queries):
+    filtered_entries = list(filter_entries(parse_file(log_file), query))
+    print "query:", query
+    print "SUMMARY"
+    print "found {} entries".format(len(filtered_entries))
+    report_sum_and_average(filtered_entries, "query_time")
+    report_sum_and_average(filtered_entries, "lock_time")
+    report_sum_and_average(filtered_entries, "rows_sent")
+    report_sum_and_average(filtered_entries, "rows_examined")
+    print
+    print "{} SLOWEST queries".format(n_queries)
+    for entry in sorted(filtered_entries, key=lambda entry: entry["query_time"], reverse=True)[:n_queries]:
+        print "{}, {}".format(entry["query_time"], entry["query"].strip())
 
 
 if __name__ == '__main__':
-    main(sys.stdin)
+    argparser = argparse.ArgumentParser()
+    argparser.add_argument("query", default="True", help="entry selector in Python expression which returns truthy value. Entry key names are available with {key_name}. e.g.: {rows_examined}==1000")
+    argparser.add_argument("--file", type=file, default=sys.stdin)
+    argparser.add_argument("--n", type=int, default=5)
+    args = argparser.parse_args()
+    main(args.file, args.query, args.n)
