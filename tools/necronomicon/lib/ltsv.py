@@ -13,7 +13,10 @@ class Entry:
         entries = line.split("\t")
         for entry in entries:
             key, val = entry.split(':', 1)
-            setattr(self, key, self.__coerce(val))
+            val = self.__coerce(val)
+            if key == 'request_time':
+                val = int(val * 1000)
+            setattr(self, key, val)
 
     def __str__(self):
         result = "<ltsv.Entry\n"

@@ -20,7 +20,7 @@ class RequestTimeAggregator:
     def aggregate(self, doc):
         res = {}
         for entry in doc:
-            bin = entry.request_time // self.resolution
+            bin = (entry.request_time // self.resolution) * self.resolution
             if bin not in res:
                 res[bin] = log.Document()
             res[bin].append(entry)
