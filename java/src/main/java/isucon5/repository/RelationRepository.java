@@ -1,7 +1,6 @@
 package isucon5.repository;
 
-import java.util.List;
-
+import isucon5.model.Relation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -10,7 +9,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import isucon5.model.Relation;
+import java.util.List;
 
 @Repository
 public class RelationRepository {
@@ -30,7 +29,7 @@ public class RelationRepository {
 		SqlParameterSource source = new MapSqlParameterSource().addValue("user_id",
 				userId);
 		return jdbcTemplate.query(
-				"SELECT * FROM relations WHERE one = :user_id OR another = :user_id ORDER BY created_at DESC",
+				"SELECT * FROM relations WHERE one = :user_id ORDER BY created_at DESC",
 				source, rowMapper);
 	}
 
@@ -38,7 +37,7 @@ public class RelationRepository {
 		SqlParameterSource source = new MapSqlParameterSource().addValue("one", one)
 				.addValue("another", another);
 		return jdbcTemplate.queryForObject(
-				"SELECT COUNT(1) AS cnt FROM relations WHERE (one = :one AND another = :another) OR (one = :one AND another = :another)",
+				"SELECT COUNT(1) AS cnt FROM relations WHERE (one = :one AND another = :another)",
 				source, Long.class);
 	}
 
