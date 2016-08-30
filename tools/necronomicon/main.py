@@ -21,12 +21,12 @@ path_agg = PathAggregator().aggregate(document)
 
 for path, doc in path_agg.items():
     print(path + ':')
-    with Indentor.indent() as indentor:
-        indentor.print('Status code trends')
-        with indentor.indent():
-            indentor.print(HistogramPresenter().format(StatusCodeAggregator().aggregate(doc)))
+    with Indentor.dig():
+        Indentor.print('Status code trends')
+        with Indentor.dig():
+            Indentor.print(HistogramPresenter().format(StatusCodeAggregator().aggregate(doc)))
 
-        indentor.print('Response time trends')
-        with indentor.indent():
-            indentor.print(HistogramPresenter().format(RequestTimeAggregator(args.time_res).aggregate(doc)))
+        Indentor.print('Response time trends')
+        with Indentor.dig():
+            Indentor.print(HistogramPresenter().format(RequestTimeAggregator(args.time_res).aggregate(doc)))
     print()

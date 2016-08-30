@@ -1,10 +1,14 @@
 class Indentor:
     @classmethod
-    def indent(cls):
+    def dig(cls):
         if hasattr(cls, 'instance'):
             return cls.instance
         cls.instance = Indentor()
         return cls.instance
+
+    @classmethod
+    def print(cls, str):
+        cls.instance._print(str)
 
     def __init__(self):
         self.depth = 0
@@ -16,7 +20,7 @@ class Indentor:
     def __exit__(self, exc_type, exc_val, trace):
         self.depth -= 1
 
-    def print(self, str):
+    def _print(self, str):
         lines = str.split('\n')
         if str[-1] == '\n':
             lines.pop()
