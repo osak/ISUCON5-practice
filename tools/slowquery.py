@@ -71,7 +71,7 @@ def parse_file(log_file):
 
 def filter_entries(entries, query):
     entries = entries
-    return filter(lambda entry: eval(query.format(**entry)), entries)
+    return filter(lambda entry: eval(query), entries)
 
 
 def report_sum_and_average(entries, name):
@@ -97,7 +97,7 @@ def main(log_file, query, n_queries):
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
-    argparser.add_argument("query", default="True", help="entry selector in Python expression which returns truthy value. Entry key names are available with {key_name}. e.g.: {rows_examined}==1000")
+    argparser.add_argument("query", default="True", help="entry selector in Python expression which returns truthy value. An entry can be referenced by variable `entry`. e.g.: entry['row_examined']==1000")
     argparser.add_argument("--file", type=file, default=sys.stdin)
     argparser.add_argument("--n", type=int, default=5)
     args = argparser.parse_args()
