@@ -1,0 +1,2390 @@
+/usr/sbin/mysqld, Version: 5.6.28-0ubuntu0.15.04.1-log ((Ubuntu)). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 160823 13:23:56
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.015181  Lock_time: 0.000051 Rows_sent: 1000  Rows_examined: 1000
+use isucon5q;
+SET timestamp=1471958636;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003049  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958636;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:23:57
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.232788  Lock_time: 0.000039 Rows_sent: 212  Rows_examined: 495118
+SET timestamp=1471958637;
+SELECT * FROM relations WHERE one = 3657 OR another = 3657 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.196840  Lock_time: 0.000119 Rows_sent: 50  Rows_examined: 500150
+SET timestamp=1471958637;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3657 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:23:58
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006788  Lock_time: 0.000096 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958638;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003244  Lock_time: 0.000056 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958638;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.162300  Lock_time: 0.000047 Rows_sent: 168  Rows_examined: 495074
+SET timestamp=1471958638;
+SELECT * FROM relations WHERE one = 4996 OR another = 4996 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.131297  Lock_time: 0.000106 Rows_sent: 50  Rows_examined: 500150
+SET timestamp=1471958638;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4996 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:23:59
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.007561  Lock_time: 0.000059 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958639;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003984  Lock_time: 0.000056 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958639;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.171212  Lock_time: 0.000041 Rows_sent: 194  Rows_examined: 495100
+SET timestamp=1471958639;
+SELECT * FROM relations WHERE one = 875 OR another = 875 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.131651  Lock_time: 0.000097 Rows_sent: 50  Rows_examined: 500150
+SET timestamp=1471958639;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 875 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:01
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.131324  Lock_time: 0.000066 Rows_sent: 50  Rows_examined: 500154
+SET timestamp=1471958641;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3657 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004439  Lock_time: 0.000033 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958641;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:02
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003947  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958642;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.155961  Lock_time: 0.000043 Rows_sent: 168  Rows_examined: 495074
+SET timestamp=1471958642;
+SELECT * FROM relations WHERE one = 4996 OR another = 4996 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.137159  Lock_time: 0.000128 Rows_sent: 50  Rows_examined: 500152
+SET timestamp=1471958642;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4996 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:03
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.266364  Lock_time: 0.000055 Rows_sent: 212  Rows_examined: 495118
+SET timestamp=1471958643;
+SELECT * FROM relations WHERE one = 3657 OR another = 3657 ORDER BY created_at DESC;
+# Time: 160823 13:24:05
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.164728  Lock_time: 0.000053 Rows_sent: 214  Rows_examined: 495122
+SET timestamp=1471958645;
+SELECT * FROM relations WHERE one = 3657 OR another = 3657 ORDER BY created_at DESC;
+# Time: 160823 13:24:06
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004300  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.014460  Lock_time: 0.000032 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.015691  Lock_time: 0.000048 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.016198  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.018129  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003977  Lock_time: 0.000048 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.006251  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004404  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004931  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.006744  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958646;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:07
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.333395  Lock_time: 0.000046 Rows_sent: 216  Rows_examined: 495124
+SET timestamp=1471958647;
+SELECT * FROM relations WHERE one = 2266 OR another = 2266 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.229170  Lock_time: 0.000072 Rows_sent: 50  Rows_examined: 500157
+SET timestamp=1471958647;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2266 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.465355  Lock_time: 0.000042 Rows_sent: 210  Rows_examined: 495118
+SET timestamp=1471958647;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.450318  Lock_time: 0.000032 Rows_sent: 218  Rows_examined: 495126
+SET timestamp=1471958647;
+SELECT * FROM relations WHERE one = 1051 OR another = 1051 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.572527  Lock_time: 0.000046 Rows_sent: 196  Rows_examined: 495104
+SET timestamp=1471958647;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.431647  Lock_time: 0.000076 Rows_sent: 196  Rows_examined: 495104
+SET timestamp=1471958647;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.495551  Lock_time: 0.000137 Rows_sent: 50  Rows_examined: 500157
+SET timestamp=1471958647;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1051 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.502229  Lock_time: 0.000131 Rows_sent: 50  Rows_examined: 500157
+SET timestamp=1471958647;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4622 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.278954  Lock_time: 0.000133 Rows_sent: 50  Rows_examined: 500157
+SET timestamp=1471958647;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.403239  Lock_time: 0.000142 Rows_sent: 50  Rows_examined: 500157
+SET timestamp=1471958647;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:08
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.017136  Lock_time: 0.000060 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958648;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008678  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958648;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:09
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004276  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004072  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.228304  Lock_time: 0.000045 Rows_sent: 210  Rows_examined: 495118
+SET timestamp=1471958649;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.250551  Lock_time: 0.000047 Rows_sent: 208  Rows_examined: 495116
+SET timestamp=1471958649;
+SELECT * FROM relations WHERE one = 3532 OR another = 3532 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.174205  Lock_time: 0.000073 Rows_sent: 50  Rows_examined: 500168
+SET timestamp=1471958649;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3532 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.193776  Lock_time: 0.000097 Rows_sent: 50  Rows_examined: 500167
+SET timestamp=1471958649;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4622 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007211  Lock_time: 0.000047 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.012498  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.011510  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003979  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003974  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003942  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958649;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:10
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.337939  Lock_time: 0.000041 Rows_sent: 188  Rows_examined: 495096
+SET timestamp=1471958650;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.393105  Lock_time: 0.000045 Rows_sent: 234  Rows_examined: 495142
+SET timestamp=1471958650;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.422725  Lock_time: 0.000044 Rows_sent: 186  Rows_examined: 495094
+SET timestamp=1471958650;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.327846  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958650;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.396990  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958650;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.402818  Lock_time: 0.000135 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958650;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:11
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.319745  Lock_time: 0.000045 Rows_sent: 208  Rows_examined: 495116
+SET timestamp=1471958651;
+SELECT * FROM relations WHERE one = 3532 OR another = 3532 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.006730  Lock_time: 0.000048 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958651;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003873  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958651;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.316096  Lock_time: 0.000064 Rows_sent: 220  Rows_examined: 495128
+SET timestamp=1471958651;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.012994  Lock_time: 0.000061 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958651;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.017624  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958651;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.248201  Lock_time: 0.000042 Rows_sent: 188  Rows_examined: 495096
+SET timestamp=1471958651;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.328750  Lock_time: 0.000105 Rows_sent: 50  Rows_examined: 500169
+SET timestamp=1471958651;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 787 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:12
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.373187  Lock_time: 0.000045 Rows_sent: 234  Rows_examined: 495142
+SET timestamp=1471958652;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.451263  Lock_time: 0.000053 Rows_sent: 186  Rows_examined: 495094
+SET timestamp=1471958652;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.359390  Lock_time: 0.000043 Rows_sent: 208  Rows_examined: 495116
+SET timestamp=1471958652;
+SELECT * FROM relations WHERE one = 3532 OR another = 3532 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006752  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.251955  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958652;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3532 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003871  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.010021  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006409  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.009127  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004787  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.264272  Lock_time: 0.000044 Rows_sent: 188  Rows_examined: 495096
+SET timestamp=1471958652;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004825  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958652;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:13
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.012806  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958653;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.321437  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958653;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.340498  Lock_time: 0.000043 Rows_sent: 220  Rows_examined: 495128
+SET timestamp=1471958653;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.369713  Lock_time: 0.000044 Rows_sent: 234  Rows_examined: 495142
+SET timestamp=1471958653;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.290905  Lock_time: 0.000121 Rows_sent: 50  Rows_examined: 500169
+SET timestamp=1471958653;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 787 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.466723  Lock_time: 0.000043 Rows_sent: 186  Rows_examined: 495094
+SET timestamp=1471958653;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.462063  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958653;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3532 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.314615  Lock_time: 0.000096 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958653;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.255130  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958653;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:14
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.233451  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500170
+SET timestamp=1471958654;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.189801  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500171
+SET timestamp=1471958654;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.260510  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500171
+SET timestamp=1471958654;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:15
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.007348  Lock_time: 0.000029 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.002114  Lock_time: 0.000032 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006264  Lock_time: 0.000061 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003772  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.321105  Lock_time: 0.000051 Rows_sent: 234  Rows_examined: 495142
+SET timestamp=1471958655;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.307225  Lock_time: 0.000052 Rows_sent: 210  Rows_examined: 495118
+SET timestamp=1471958655;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.175653  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500177
+SET timestamp=1471958655;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.347703  Lock_time: 0.000049 Rows_sent: 218  Rows_examined: 495126
+SET timestamp=1471958655;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.012884  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004979  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958655;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:16
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006107  Lock_time: 0.000033 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958656;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.264795  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500177
+SET timestamp=1471958656;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003893  Lock_time: 0.000052 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958656;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.320739  Lock_time: 0.000046 Rows_sent: 218  Rows_examined: 495126
+SET timestamp=1471958656;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.322457  Lock_time: 0.000044 Rows_sent: 218  Rows_examined: 495126
+SET timestamp=1471958656;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.271134  Lock_time: 0.000093 Rows_sent: 50  Rows_examined: 500177
+SET timestamp=1471958656;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.188261  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500178
+SET timestamp=1471958656;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.008937  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958656;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003078  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958656;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:17
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.170513  Lock_time: 0.000043 Rows_sent: 218  Rows_examined: 495128
+SET timestamp=1471958657;
+SELECT * FROM relations WHERE one = 1051 OR another = 1051 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008019  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958657;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003892  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958657;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.245982  Lock_time: 0.000095 Rows_sent: 50  Rows_examined: 500185
+SET timestamp=1471958657;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1051 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.289300  Lock_time: 0.000048 Rows_sent: 212  Rows_examined: 495122
+SET timestamp=1471958657;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.330624  Lock_time: 0.000044 Rows_sent: 188  Rows_examined: 495098
+SET timestamp=1471958657;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.005085  Lock_time: 0.000059 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958657;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006586  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958657;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004559  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958657;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:18
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004774  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958658;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.303997  Lock_time: 0.000089 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958658;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.349790  Lock_time: 0.000047 Rows_sent: 198  Rows_examined: 495108
+SET timestamp=1471958658;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.399170  Lock_time: 0.000041 Rows_sent: 196  Rows_examined: 495106
+SET timestamp=1471958658;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.422164  Lock_time: 0.000057 Rows_sent: 218  Rows_examined: 495128
+SET timestamp=1471958658;
+SELECT * FROM relations WHERE one = 1051 OR another = 1051 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.277040  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958658;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006555  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958658;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.260437  Lock_time: 0.000128 Rows_sent: 50  Rows_examined: 500191
+SET timestamp=1471958658;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003899  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958658;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:19
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.323837  Lock_time: 0.000043 Rows_sent: 200  Rows_examined: 495110
+SET timestamp=1471958659;
+SELECT * FROM relations WHERE one = 3424 OR another = 3424 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.341767  Lock_time: 0.000045 Rows_sent: 188  Rows_examined: 495098
+SET timestamp=1471958659;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.259585  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500189
+SET timestamp=1471958659;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3424 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006906  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958659;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003876  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958659;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:20
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.419640  Lock_time: 0.000052 Rows_sent: 198  Rows_examined: 495108
+SET timestamp=1471958660;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.349719  Lock_time: 0.000049 Rows_sent: 196  Rows_examined: 495106
+SET timestamp=1471958660;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.008825  Lock_time: 0.000052 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958660;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003730  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958660;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.290173  Lock_time: 0.000044 Rows_sent: 218  Rows_examined: 495128
+SET timestamp=1471958660;
+SELECT * FROM relations WHERE one = 1051 OR another = 1051 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006549  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958660;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.009766  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958660;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.306889  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958660;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1051 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.309972  Lock_time: 0.000045 Rows_sent: 188  Rows_examined: 495098
+SET timestamp=1471958660;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# Time: 160823 13:24:21
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.262182  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958661;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.006219  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958661;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008920  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958661;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.333946  Lock_time: 0.000045 Rows_sent: 200  Rows_examined: 495110
+SET timestamp=1471958661;
+SELECT * FROM relations WHERE one = 3424 OR another = 3424 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003910  Lock_time: 0.000048 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958661;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003851  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958661;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.255586  Lock_time: 0.000064 Rows_sent: 50  Rows_examined: 500189
+SET timestamp=1471958661;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3424 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.315653  Lock_time: 0.000041 Rows_sent: 198  Rows_examined: 495108
+SET timestamp=1471958661;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.330487  Lock_time: 0.000044 Rows_sent: 196  Rows_examined: 495106
+SET timestamp=1471958661;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.351376  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958661;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1051 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:22
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.264756  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500191
+SET timestamp=1471958662;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.331640  Lock_time: 0.000085 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958662;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006795  Lock_time: 0.000051 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958662;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004451  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958662;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.273318  Lock_time: 0.000068 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958662;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.310876  Lock_time: 0.000045 Rows_sent: 222  Rows_examined: 495132
+SET timestamp=1471958662;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.184476  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500190
+SET timestamp=1471958662;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 787 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.258633  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500192
+SET timestamp=1471958662;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:23
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.273931  Lock_time: 0.000075 Rows_sent: 50  Rows_examined: 500191
+SET timestamp=1471958663;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.007091  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958663;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003899  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958663;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.175581  Lock_time: 0.000029 Rows_sent: 210  Rows_examined: 495120
+SET timestamp=1471958663;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.006183  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958663;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003756  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958663;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.225396  Lock_time: 0.000097 Rows_sent: 50  Rows_examined: 500195
+SET timestamp=1471958663;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:24
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.284084  Lock_time: 0.000041 Rows_sent: 198  Rows_examined: 495108
+SET timestamp=1471958664;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.011267  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.010580  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004884  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004241  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.239214  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500199
+SET timestamp=1471958664;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.305705  Lock_time: 0.000043 Rows_sent: 210  Rows_examined: 495120
+SET timestamp=1471958664;
+SELECT * FROM relations WHERE one = 257 OR another = 257 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.359534  Lock_time: 0.000044 Rows_sent: 168  Rows_examined: 495078
+SET timestamp=1471958664;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.015021  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004661  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958664;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.438363  Lock_time: 0.000046 Rows_sent: 200  Rows_examined: 495110
+SET timestamp=1471958664;
+SELECT * FROM relations WHERE one = 3424 OR another = 3424 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.290649  Lock_time: 0.000093 Rows_sent: 50  Rows_examined: 500200
+SET timestamp=1471958664;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 257 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.295322  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500201
+SET timestamp=1471958664;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:25
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.327289  Lock_time: 0.000044 Rows_sent: 168  Rows_examined: 495078
+SET timestamp=1471958665;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.008087  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958665;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.250781  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500203
+SET timestamp=1471958665;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003938  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958665;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.250008  Lock_time: 0.000042 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958665;
+SELECT * FROM relations WHERE one = 257 OR another = 257 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.008723  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958665;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.002212  Lock_time: 0.000031 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958665;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:26
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.206962  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500209
+SET timestamp=1471958666;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 257 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.012229  Lock_time: 0.000052 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958666;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004882  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958666;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.318022  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495080
+SET timestamp=1471958666;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.327655  Lock_time: 0.000043 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958666;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.340753  Lock_time: 0.000044 Rows_sent: 186  Rows_examined: 495098
+SET timestamp=1471958666;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.280922  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958666;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.021409  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958666;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.338429  Lock_time: 0.000053 Rows_sent: 202  Rows_examined: 495114
+SET timestamp=1471958666;
+SELECT * FROM relations WHERE one = 3424 OR another = 3424 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004787  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958666;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.359535  Lock_time: 0.000070 Rows_sent: 50  Rows_examined: 500211
+SET timestamp=1471958666;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.400897  Lock_time: 0.000043 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958666;
+SELECT * FROM relations WHERE one = 257 OR another = 257 ORDER BY created_at DESC;
+# Time: 160823 13:24:27
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.313128  Lock_time: 0.000043 Rows_sent: 168  Rows_examined: 495080
+SET timestamp=1471958667;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.266145  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958667;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.339945  Lock_time: 0.000059 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958667;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006973  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958667;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006694  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958667;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003817  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958667;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003990  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958667;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:28
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.317109  Lock_time: 0.000042 Rows_sent: 204  Rows_examined: 495116
+SET timestamp=1471958668;
+SELECT * FROM relations WHERE one = 4287 OR another = 4287 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.412592  Lock_time: 0.000032 Rows_sent: 186  Rows_examined: 495098
+SET timestamp=1471958668;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.321930  Lock_time: 0.000045 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958668;
+SELECT * FROM relations WHERE one = 257 OR another = 257 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.016477  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958668;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.246258  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500209
+SET timestamp=1471958668;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4287 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.014089  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958668;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.266780  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958668;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 257 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.369435  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958668;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.010867  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958668;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003886  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958668;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.307128  Lock_time: 0.000044 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958668;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.010735  Lock_time: 0.000075 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958668;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:29
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003117  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958669;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.278077  Lock_time: 0.000089 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958669;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.333251  Lock_time: 0.000043 Rows_sent: 186  Rows_examined: 495098
+SET timestamp=1471958669;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.265313  Lock_time: 0.000065 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958669;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 257 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.362806  Lock_time: 0.000044 Rows_sent: 204  Rows_examined: 495116
+SET timestamp=1471958669;
+SELECT * FROM relations WHERE one = 4287 OR another = 4287 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.263557  Lock_time: 0.000101 Rows_sent: 50  Rows_examined: 500212
+SET timestamp=1471958669;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.255870  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500210
+SET timestamp=1471958669;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4287 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.006844  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958669;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004495  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958669;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:30
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.281999  Lock_time: 0.000072 Rows_sent: 50  Rows_examined: 500212
+SET timestamp=1471958670;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.274329  Lock_time: 0.000069 Rows_sent: 50  Rows_examined: 500213
+SET timestamp=1471958670;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.344616  Lock_time: 0.000044 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958670;
+SELECT * FROM relations WHERE one = 3181 OR another = 3181 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.008206  Lock_time: 0.000055 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958670;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.002464  Lock_time: 0.000033 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958670;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.216463  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500213
+SET timestamp=1471958670;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3181 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.012993  Lock_time: 0.000068 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958670;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004670  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958670;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.272235  Lock_time: 0.000067 Rows_sent: 200  Rows_examined: 495112
+SET timestamp=1471958670;
+SELECT * FROM relations WHERE one = 233 OR another = 233 ORDER BY created_at DESC;
+# Time: 160823 13:24:31
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.221651  Lock_time: 0.000100 Rows_sent: 50  Rows_examined: 500215
+SET timestamp=1471958671;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 233 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.290451  Lock_time: 0.000044 Rows_sent: 202  Rows_examined: 495114
+SET timestamp=1471958671;
+SELECT * FROM relations WHERE one = 350 OR another = 350 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.168429  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500216
+SET timestamp=1471958671;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 350 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.007959  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.008119  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003783  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.007047  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003850  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.010505  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003987  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004994  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958671;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:32
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.331151  Lock_time: 0.000041 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958672;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.360240  Lock_time: 0.000042 Rows_sent: 210  Rows_examined: 495122
+SET timestamp=1471958672;
+SELECT * FROM relations WHERE one = 257 OR another = 257 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.414703  Lock_time: 0.000044 Rows_sent: 200  Rows_examined: 495112
+SET timestamp=1471958672;
+SELECT * FROM relations WHERE one = 233 OR another = 233 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.295398  Lock_time: 0.000126 Rows_sent: 50  Rows_examined: 500218
+SET timestamp=1471958672;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.281347  Lock_time: 0.000139 Rows_sent: 50  Rows_examined: 500219
+SET timestamp=1471958672;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 257 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.406325  Lock_time: 0.000043 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958672;
+SELECT * FROM relations WHERE one = 3181 OR another = 3181 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.321039  Lock_time: 0.000097 Rows_sent: 50  Rows_examined: 500219
+SET timestamp=1471958672;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 233 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007046  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958672;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003936  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958672;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.258376  Lock_time: 0.000085 Rows_sent: 50  Rows_examined: 500220
+SET timestamp=1471958672;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3181 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:33
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.279920  Lock_time: 0.000045 Rows_sent: 196  Rows_examined: 495108
+SET timestamp=1471958673;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.199540  Lock_time: 0.000088 Rows_sent: 50  Rows_examined: 500226
+SET timestamp=1471958673;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.010879  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958673;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.011392  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958673;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.214064  Lock_time: 0.000046 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958673;
+SELECT * FROM relations WHERE one = 3181 OR another = 3181 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003857  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958673;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003717  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958673;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.319911  Lock_time: 0.000035 Rows_sent: 218  Rows_examined: 495130
+SET timestamp=1471958673;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.329544  Lock_time: 0.000043 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958673;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.015187  Lock_time: 0.000054 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958673;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:34
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.357083  Lock_time: 0.000061 Rows_sent: 196  Rows_examined: 495108
+SET timestamp=1471958674;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007628  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958674;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.257792  Lock_time: 0.000123 Rows_sent: 50  Rows_examined: 500229
+SET timestamp=1471958674;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.436608  Lock_time: 0.000094 Rows_sent: 50  Rows_examined: 500228
+SET timestamp=1471958674;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.353764  Lock_time: 0.000038 Rows_sent: 204  Rows_examined: 495116
+SET timestamp=1471958674;
+SELECT * FROM relations WHERE one = 4287 OR another = 4287 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.333791  Lock_time: 0.000042 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958674;
+SELECT * FROM relations WHERE one = 3181 OR another = 3181 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.009665  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958674;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:35
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.261585  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500226
+SET timestamp=1471958675;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3181 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.002122  Lock_time: 0.000033 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958675;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.328679  Lock_time: 0.000046 Rows_sent: 198  Rows_examined: 495110
+SET timestamp=1471958675;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.317298  Lock_time: 0.000045 Rows_sent: 218  Rows_examined: 495130
+SET timestamp=1471958675;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.325027  Lock_time: 0.000042 Rows_sent: 196  Rows_examined: 495110
+SET timestamp=1471958675;
+SELECT * FROM relations WHERE one = 2696 OR another = 2696 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.205969  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500230
+SET timestamp=1471958675;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.010421  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958675;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004351  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958675;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.251696  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500226
+SET timestamp=1471958675;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3181 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.007589  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958675;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:36
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003755  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958676;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.295943  Lock_time: 0.000038 Rows_sent: 198  Rows_examined: 495112
+SET timestamp=1471958676;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.337274  Lock_time: 0.000044 Rows_sent: 218  Rows_examined: 495132
+SET timestamp=1471958676;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.248270  Lock_time: 0.000051 Rows_sent: 206  Rows_examined: 495120
+SET timestamp=1471958676;
+SELECT * FROM relations WHERE one = 4287 OR another = 4287 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.310929  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500229
+SET timestamp=1471958676;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.297041  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500230
+SET timestamp=1471958676;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2696 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.264622  Lock_time: 0.000121 Rows_sent: 50  Rows_examined: 500228
+SET timestamp=1471958676;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:37
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006085  Lock_time: 0.000032 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004464  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.008920  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003902  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.197087  Lock_time: 0.000064 Rows_sent: 50  Rows_examined: 500231
+SET timestamp=1471958677;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.342404  Lock_time: 0.000034 Rows_sent: 212  Rows_examined: 495126
+SET timestamp=1471958677;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.327080  Lock_time: 0.000044 Rows_sent: 198  Rows_examined: 495112
+SET timestamp=1471958677;
+SELECT * FROM relations WHERE one = 772 OR another = 772 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008950  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004912  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.011383  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.297565  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500229
+SET timestamp=1471958677;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4622 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.266095  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500233
+SET timestamp=1471958677;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 772 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004875  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958677;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:38
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.301312  Lock_time: 0.000043 Rows_sent: 202  Rows_examined: 495116
+SET timestamp=1471958678;
+SELECT * FROM relations WHERE one = 3206 OR another = 3206 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.317579  Lock_time: 0.000043 Rows_sent: 202  Rows_examined: 495116
+SET timestamp=1471958678;
+SELECT * FROM relations WHERE one = 350 OR another = 350 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.260492  Lock_time: 0.000108 Rows_sent: 50  Rows_examined: 500233
+SET timestamp=1471958678;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3206 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008764  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.203292  Lock_time: 0.000088 Rows_sent: 50  Rows_examined: 500234
+SET timestamp=1471958678;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 350 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004309  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.008849  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.008892  Lock_time: 0.000052 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003672  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004500  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958678;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.297324  Lock_time: 0.000040 Rows_sent: 206  Rows_examined: 495120
+SET timestamp=1471958678;
+SELECT * FROM relations WHERE one = 4287 OR another = 4287 ORDER BY created_at DESC;
+# Time: 160823 13:24:39
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.328566  Lock_time: 0.000044 Rows_sent: 234  Rows_examined: 495148
+SET timestamp=1471958679;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.385168  Lock_time: 0.000041 Rows_sent: 186  Rows_examined: 495100
+SET timestamp=1471958679;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.269988  Lock_time: 0.000119 Rows_sent: 50  Rows_examined: 500232
+SET timestamp=1471958679;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4287 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.178855  Lock_time: 0.000095 Rows_sent: 50  Rows_examined: 500235
+SET timestamp=1471958679;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.260181  Lock_time: 0.000087 Rows_sent: 50  Rows_examined: 500235
+SET timestamp=1471958679;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.007088  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958679;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003874  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958679;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.008569  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958679;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004093  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958679;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.253066  Lock_time: 0.000043 Rows_sent: 188  Rows_examined: 495102
+SET timestamp=1471958679;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# Time: 160823 13:24:40
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.206279  Lock_time: 0.000064 Rows_sent: 50  Rows_examined: 500240
+SET timestamp=1471958680;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.250703  Lock_time: 0.000044 Rows_sent: 168  Rows_examined: 495082
+SET timestamp=1471958680;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.257078  Lock_time: 0.000049 Rows_sent: 186  Rows_examined: 495100
+SET timestamp=1471958680;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.229212  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500242
+SET timestamp=1471958680;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008257  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958680;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003928  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958680;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.017588  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958680;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.268715  Lock_time: 0.000045 Rows_sent: 188  Rows_examined: 495102
+SET timestamp=1471958680;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# Time: 160823 13:24:41
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.316475  Lock_time: 0.000052 Rows_sent: 190  Rows_examined: 495104
+SET timestamp=1471958681;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.005014  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958681;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.371445  Lock_time: 0.000049 Rows_sent: 212  Rows_examined: 495126
+SET timestamp=1471958681;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.392025  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495082
+SET timestamp=1471958681;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.412354  Lock_time: 0.000075 Rows_sent: 50  Rows_examined: 500242
+SET timestamp=1471958681;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006502  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958681;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.382257  Lock_time: 0.000044 Rows_sent: 186  Rows_examined: 495100
+SET timestamp=1471958681;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004324  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958681;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.263033  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500242
+SET timestamp=1471958681;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.308828  Lock_time: 0.000045 Rows_sent: 188  Rows_examined: 495102
+SET timestamp=1471958681;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.009236  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958681;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:42
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004056  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958682;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.183016  Lock_time: 0.000066 Rows_sent: 50  Rows_examined: 500243
+SET timestamp=1471958682;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.245724  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958682;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.318761  Lock_time: 0.000044 Rows_sent: 190  Rows_examined: 495106
+SET timestamp=1471958682;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.267603  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500242
+SET timestamp=1471958682;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.259847  Lock_time: 0.000116 Rows_sent: 50  Rows_examined: 500243
+SET timestamp=1471958682;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.007940  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958682;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.235876  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500243
+SET timestamp=1471958682;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003883  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958682;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:43
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.299394  Lock_time: 0.000035 Rows_sent: 214  Rows_examined: 495130
+SET timestamp=1471958683;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.308136  Lock_time: 0.000044 Rows_sent: 190  Rows_examined: 495106
+SET timestamp=1471958683;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.253536  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500243
+SET timestamp=1471958683;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.006267  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958683;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.246625  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500242
+SET timestamp=1471958683;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003879  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958683;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.008056  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958683;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003972  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958683;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:44
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.312843  Lock_time: 0.000045 Rows_sent: 186  Rows_examined: 495102
+SET timestamp=1471958684;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.009295  Lock_time: 0.000074 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958684;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.227454  Lock_time: 0.000039 Rows_sent: 224  Rows_examined: 495140
+SET timestamp=1471958684;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004649  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958684;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.224651  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500246
+SET timestamp=1471958684;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.276814  Lock_time: 0.000064 Rows_sent: 50  Rows_examined: 500246
+SET timestamp=1471958684;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.333106  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500245
+SET timestamp=1471958684;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 787 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.321460  Lock_time: 0.000044 Rows_sent: 210  Rows_examined: 495126
+SET timestamp=1471958684;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.009258  Lock_time: 0.000045 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958684;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003701  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958684;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.238642  Lock_time: 0.000082 Rows_sent: 50  Rows_examined: 500247
+SET timestamp=1471958684;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:45
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.277044  Lock_time: 0.000045 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958685;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.177720  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500250
+SET timestamp=1471958685;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.008836  Lock_time: 0.000050 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004188  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007719  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003898  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.018427  Lock_time: 0.000054 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.313137  Lock_time: 0.000043 Rows_sent: 204  Rows_examined: 495120
+SET timestamp=1471958685;
+SELECT * FROM relations WHERE one = 754 OR another = 754 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.014799  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.012964  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004930  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958685;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:46
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.370872  Lock_time: 0.000035 Rows_sent: 214  Rows_examined: 495130
+SET timestamp=1471958686;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.260640  Lock_time: 0.000068 Rows_sent: 50  Rows_examined: 500254
+SET timestamp=1471958686;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 754 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.360079  Lock_time: 0.000040 Rows_sent: 190  Rows_examined: 495106
+SET timestamp=1471958686;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.272312  Lock_time: 0.000087 Rows_sent: 50  Rows_examined: 500255
+SET timestamp=1471958686;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.015906  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958686;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.332618  Lock_time: 0.000043 Rows_sent: 218  Rows_examined: 495134
+SET timestamp=1471958686;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003841  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958686;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.308187  Lock_time: 0.000072 Rows_sent: 50  Rows_examined: 500255
+SET timestamp=1471958686;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.303035  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500258
+SET timestamp=1471958686;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006603  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958686;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.311655  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958686;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003865  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958686;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:47
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.260008  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500256
+SET timestamp=1471958687;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.397030  Lock_time: 0.000044 Rows_sent: 204  Rows_examined: 495120
+SET timestamp=1471958687;
+SELECT * FROM relations WHERE one = 754 OR another = 754 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.410842  Lock_time: 0.000082 Rows_sent: 214  Rows_examined: 495130
+SET timestamp=1471958687;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.316169  Lock_time: 0.000050 Rows_sent: 218  Rows_examined: 495134
+SET timestamp=1471958687;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.275129  Lock_time: 0.000092 Rows_sent: 50  Rows_examined: 500255
+SET timestamp=1471958687;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 754 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006432  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958687;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003717  Lock_time: 0.000031 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958687;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:48
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007148  Lock_time: 0.000037 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.320258  Lock_time: 0.000061 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958688;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003656  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.005806  Lock_time: 0.000029 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.298727  Lock_time: 0.000043 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958688;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004873  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.269705  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500260
+SET timestamp=1471958688;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.323154  Lock_time: 0.000043 Rows_sent: 214  Rows_examined: 495130
+SET timestamp=1471958688;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.256789  Lock_time: 0.000042 Rows_sent: 218  Rows_examined: 495134
+SET timestamp=1471958688;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.011360  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004682  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958688;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.233936  Lock_time: 0.000126 Rows_sent: 50  Rows_examined: 500258
+SET timestamp=1471958688;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.259774  Lock_time: 0.000107 Rows_sent: 50  Rows_examined: 500261
+SET timestamp=1471958688;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:49
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.343517  Lock_time: 0.000043 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958689;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.260481  Lock_time: 0.000085 Rows_sent: 50  Rows_examined: 500260
+SET timestamp=1471958689;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.245707  Lock_time: 0.000039 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958689;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.293428  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500258
+SET timestamp=1471958689;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.347712  Lock_time: 0.000050 Rows_sent: 224  Rows_examined: 495140
+SET timestamp=1471958689;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.310045  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500261
+SET timestamp=1471958689;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:50
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007908  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958690;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004237  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958690;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.201744  Lock_time: 0.000071 Rows_sent: 50  Rows_examined: 500260
+SET timestamp=1471958690;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.192998  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495084
+SET timestamp=1471958690;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.169332  Lock_time: 0.000072 Rows_sent: 50  Rows_examined: 500262
+SET timestamp=1471958690;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007601  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958690;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.008258  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958690;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:51
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003878  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958691;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003784  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958691;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.194306  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500264
+SET timestamp=1471958691;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.283187  Lock_time: 0.000035 Rows_sent: 188  Rows_examined: 495106
+SET timestamp=1471958691;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.327221  Lock_time: 0.000042 Rows_sent: 218  Rows_examined: 495136
+SET timestamp=1471958691;
+SELECT * FROM relations WHERE one = 3898 OR another = 3898 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.026646  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958691;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.280019  Lock_time: 0.000093 Rows_sent: 50  Rows_examined: 500265
+SET timestamp=1471958691;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004632  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958691;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.264487  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500266
+SET timestamp=1471958691;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3898 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.347742  Lock_time: 0.000049 Rows_sent: 226  Rows_examined: 495144
+SET timestamp=1471958691;
+SELECT * FROM relations WHERE one = 787 OR another = 787 ORDER BY created_at DESC;
+# Time: 160823 13:24:52
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.304293  Lock_time: 0.000045 Rows_sent: 186  Rows_examined: 495104
+SET timestamp=1471958692;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.230993  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500264
+SET timestamp=1471958692;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.010661  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.008650  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003632  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003865  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.014860  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.020194  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004824  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.255394  Lock_time: 0.000035 Rows_sent: 216  Rows_examined: 495134
+SET timestamp=1471958692;
+SELECT * FROM relations WHERE one = 2266 OR another = 2266 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.024178  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958692;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.302861  Lock_time: 0.000044 Rows_sent: 206  Rows_examined: 495124
+SET timestamp=1471958692;
+SELECT * FROM relations WHERE one = 2028 OR another = 2028 ORDER BY created_at DESC;
+# Time: 160823 13:24:53
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.293820  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500271
+SET timestamp=1471958693;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2266 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.271634  Lock_time: 0.000064 Rows_sent: 50  Rows_examined: 500272
+SET timestamp=1471958693;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2028 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.390712  Lock_time: 0.000043 Rows_sent: 190  Rows_examined: 495108
+SET timestamp=1471958693;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.339684  Lock_time: 0.000042 Rows_sent: 214  Rows_examined: 495132
+SET timestamp=1471958693;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.012888  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958693;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004559  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958693;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.341169  Lock_time: 0.000079 Rows_sent: 50  Rows_examined: 500275
+SET timestamp=1471958693;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.396953  Lock_time: 0.000086 Rows_sent: 50  Rows_examined: 500275
+SET timestamp=1471958693;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.298425  Lock_time: 0.000044 Rows_sent: 168  Rows_examined: 495086
+SET timestamp=1471958693;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.013281  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958693;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:54
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003732  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958694;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.253223  Lock_time: 0.000068 Rows_sent: 50  Rows_examined: 500277
+SET timestamp=1471958694;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.012009  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958694;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004883  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958694;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.318287  Lock_time: 0.000044 Rows_sent: 206  Rows_examined: 495124
+SET timestamp=1471958694;
+SELECT * FROM relations WHERE one = 2028 OR another = 2028 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.415707  Lock_time: 0.000043 Rows_sent: 214  Rows_examined: 495132
+SET timestamp=1471958694;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.299102  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500276
+SET timestamp=1471958694;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2028 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.499980  Lock_time: 0.000047 Rows_sent: 190  Rows_examined: 495108
+SET timestamp=1471958694;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.314396  Lock_time: 0.000044 Rows_sent: 186  Rows_examined: 495104
+SET timestamp=1471958694;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# Time: 160823 13:24:55
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.361550  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500279
+SET timestamp=1471958695;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.461003  Lock_time: 0.000050 Rows_sent: 168  Rows_examined: 495086
+SET timestamp=1471958695;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.009226  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.021640  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.012203  Lock_time: 0.000072 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.003778  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.004059  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004199  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.011395  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.257371  Lock_time: 0.000044 Rows_sent: 190  Rows_examined: 495108
+SET timestamp=1471958695;
+SELECT * FROM relations WHERE one = 4851 OR another = 4851 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.326526  Lock_time: 0.000028 Rows_sent: 214  Rows_examined: 495132
+SET timestamp=1471958695;
+SELECT * FROM relations WHERE one = 3768 OR another = 3768 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.014547  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958695;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.328141  Lock_time: 0.000042 Rows_sent: 206  Rows_examined: 495124
+SET timestamp=1471958695;
+SELECT * FROM relations WHERE one = 754 OR another = 754 ORDER BY created_at DESC;
+# Time: 160823 13:24:56
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.311033  Lock_time: 0.000068 Rows_sent: 50  Rows_examined: 500278
+SET timestamp=1471958696;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.280024  Lock_time: 0.000081 Rows_sent: 50  Rows_examined: 500278
+SET timestamp=1471958696;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.282949  Lock_time: 0.000074 Rows_sent: 50  Rows_examined: 500276
+SET timestamp=1471958696;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 754 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.467996  Lock_time: 0.000042 Rows_sent: 186  Rows_examined: 495104
+SET timestamp=1471958696;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.460614  Lock_time: 0.000042 Rows_sent: 168  Rows_examined: 495086
+SET timestamp=1471958696;
+SELECT * FROM relations WHERE one = 1542 OR another = 1542 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.255595  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500280
+SET timestamp=1471958696;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:57
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.006557  Lock_time: 0.000065 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958697;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004989  Lock_time: 0.000057 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958697;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.253344  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500278
+SET timestamp=1471958697;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4851 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.234616  Lock_time: 0.000089 Rows_sent: 50  Rows_examined: 500278
+SET timestamp=1471958697;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3768 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.249067  Lock_time: 0.000040 Rows_sent: 186  Rows_examined: 495104
+SET timestamp=1471958697;
+SELECT * FROM relations WHERE one = 1665 OR another = 1665 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.247456  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500280
+SET timestamp=1471958697;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1542 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.151841  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500279
+SET timestamp=1471958697;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# Time: 160823 13:24:58
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.202321  Lock_time: 0.000047 Rows_sent: 206  Rows_examined: 495124
+SET timestamp=1471958698;
+SELECT * FROM relations WHERE one = 2028 OR another = 2028 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.171539  Lock_time: 0.000086 Rows_sent: 50  Rows_examined: 500283
+SET timestamp=1471958698;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1665 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.007148  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003885  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.006722  Lock_time: 0.000048 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006603  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003802  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003843  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958698;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:24:59
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.311449  Lock_time: 0.000047 Rows_sent: 210  Rows_examined: 495128
+SET timestamp=1471958699;
+SELECT * FROM relations WHERE one = 2774 OR another = 2774 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.242788  Lock_time: 0.000083 Rows_sent: 50  Rows_examined: 500285
+SET timestamp=1471958699;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2774 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.232214  Lock_time: 0.000047 Rows_sent: 202  Rows_examined: 495122
+SET timestamp=1471958699;
+SELECT * FROM relations WHERE one = 3206 OR another = 3206 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.327482  Lock_time: 0.000047 Rows_sent: 202  Rows_examined: 495122
+SET timestamp=1471958699;
+SELECT * FROM relations WHERE one = 3206 OR another = 3206 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.271391  Lock_time: 0.000096 Rows_sent: 50  Rows_examined: 500285
+SET timestamp=1471958699;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3206 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.251561  Lock_time: 0.000089 Rows_sent: 50  Rows_examined: 500285
+SET timestamp=1471958699;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3206 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.007007  Lock_time: 0.000047 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958699;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:25:00
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.003177  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.282001  Lock_time: 0.000052 Rows_sent: 208  Rows_examined: 495128
+SET timestamp=1471958700;
+SELECT * FROM relations WHERE one = 2028 OR another = 2028 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.012803  Lock_time: 0.000049 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.013951  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004637  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.029312  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.012453  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.286160  Lock_time: 0.000045 Rows_sent: 202  Rows_examined: 495122
+SET timestamp=1471958700;
+SELECT * FROM relations WHERE one = 3206 OR another = 3206 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.003807  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.343170  Lock_time: 0.000042 Rows_sent: 234  Rows_examined: 495154
+SET timestamp=1471958700;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.301595  Lock_time: 0.000052 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958700;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.358414  Lock_time: 0.000075 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958700;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3206 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.017006  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004798  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958700;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.318551  Lock_time: 0.000096 Rows_sent: 50  Rows_examined: 500290
+SET timestamp=1471958700;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.431731  Lock_time: 0.000035 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958700;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# Time: 160823 13:25:01
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.411740  Lock_time: 0.000125 Rows_sent: 50  Rows_examined: 500291
+SET timestamp=1471958701;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.282278  Lock_time: 0.000073 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958701;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.006507  Lock_time: 0.000040 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958701;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.328556  Lock_time: 0.000036 Rows_sent: 214  Rows_examined: 495134
+SET timestamp=1471958701;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003927  Lock_time: 0.000042 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958701;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.259264  Lock_time: 0.000078 Rows_sent: 50  Rows_examined: 500287
+SET timestamp=1471958701;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4622 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.317058  Lock_time: 0.000044 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958701;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# Time: 160823 13:25:02
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.419108  Lock_time: 0.000057 Rows_sent: 234  Rows_examined: 495154
+SET timestamp=1471958702;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.353841  Lock_time: 0.000052 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958702;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.349537  Lock_time: 0.000097 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958702;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.394006  Lock_time: 0.000051 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958702;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.008419  Lock_time: 0.000044 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.003865  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.284907  Lock_time: 0.000045 Rows_sent: 202  Rows_examined: 495122
+SET timestamp=1471958702;
+SELECT * FROM relations WHERE one = 233 OR another = 233 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.012349  Lock_time: 0.000036 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.016185  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.018350  Lock_time: 0.000030 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.004696  Lock_time: 0.000038 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004598  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958702;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:25:03
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    10
+# Query_time: 0.212354  Lock_time: 0.000085 Rows_sent: 50  Rows_examined: 500287
+SET timestamp=1471958703;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 233 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004628  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958703;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.331065  Lock_time: 0.000042 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958703;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.505911  Lock_time: 0.000046 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958703;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.385751  Lock_time: 0.000032 Rows_sent: 234  Rows_examined: 495154
+SET timestamp=1471958703;
+SELECT * FROM relations WHERE one = 88 OR another = 88 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.418136  Lock_time: 0.000042 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958703;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.310434  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500291
+SET timestamp=1471958703;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.307051  Lock_time: 0.000084 Rows_sent: 50  Rows_examined: 500290
+SET timestamp=1471958703;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.257623  Lock_time: 0.000071 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958703;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.008126  Lock_time: 0.000039 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958703;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.003885  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958703;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:25:04
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.242439  Lock_time: 0.000043 Rows_sent: 188  Rows_examined: 495108
+SET timestamp=1471958704;
+SELECT * FROM relations WHERE one = 4481 OR another = 4481 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.206381  Lock_time: 0.000092 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958704;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.267806  Lock_time: 0.000046 Rows_sent: 50  Rows_examined: 500290
+SET timestamp=1471958704;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 88 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.269349  Lock_time: 0.000076 Rows_sent: 50  Rows_examined: 500291
+SET timestamp=1471958704;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.268782  Lock_time: 0.000071 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958704;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.296702  Lock_time: 0.000050 Rows_sent: 214  Rows_examined: 495134
+SET timestamp=1471958704;
+SELECT * FROM relations WHERE one = 4622 OR another = 4622 ORDER BY created_at DESC;
+# Time: 160823 13:25:05
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.208748  Lock_time: 0.000077 Rows_sent: 50  Rows_examined: 500289
+SET timestamp=1471958705;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4481 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.005042  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.019776  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.014142  Lock_time: 0.000043 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.006812  Lock_time: 0.000046 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.004748  Lock_time: 0.000035 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.004611  Lock_time: 0.000034 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958705;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# Time: 160823 13:25:06
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.191687  Lock_time: 0.000038 Rows_sent: 188  Rows_examined: 495110
+SET timestamp=1471958706;
+SELECT * FROM relations WHERE one = 4885 OR another = 4885 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.323653  Lock_time: 0.000044 Rows_sent: 202  Rows_examined: 495124
+SET timestamp=1471958706;
+SELECT * FROM relations WHERE one = 3206 OR another = 3206 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.011242  Lock_time: 0.000065 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958706;
+SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.332457  Lock_time: 0.000038 Rows_sent: 218  Rows_examined: 495140
+SET timestamp=1471958706;
+SELECT * FROM relations WHERE one = 1051 OR another = 1051 ORDER BY created_at DESC;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.176960  Lock_time: 0.000104 Rows_sent: 50  Rows_examined: 500296
+SET timestamp=1471958706;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 4885 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.004648  Lock_time: 0.000041 Rows_sent: 1000  Rows_examined: 1000
+SET timestamp=1471958706;
+SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.269953  Lock_time: 0.000128 Rows_sent: 50  Rows_examined: 500294
+SET timestamp=1471958706;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 3206 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     7
+# Query_time: 0.262072  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500293
+SET timestamp=1471958706;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 1051 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    11
+# Query_time: 0.317020  Lock_time: 0.000041 Rows_sent: 186  Rows_examined: 495108
+SET timestamp=1471958706;
+SELECT * FROM relations WHERE one = 2493 OR another = 2493 ORDER BY created_at DESC;
+# Time: 160823 13:25:07
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 0.183882  Lock_time: 0.000080 Rows_sent: 50  Rows_examined: 500292
+SET timestamp=1471958707;
+SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated FROM footprints WHERE user_id = 2493 GROUP BY user_id, owner_id, DATE(created_at) ORDER BY updated DESC LIMIT 50;
