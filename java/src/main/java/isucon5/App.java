@@ -1,14 +1,17 @@
 package isucon5;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
-import java.util.stream.Collectors;
-
-import javax.servlet.SessionTrackingMode;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
+import isucon5.model.Comment;
+import isucon5.model.Entry;
+import isucon5.model.Footprint;
+import isucon5.model.Profile;
+import isucon5.model.Relation;
+import isucon5.model.User;
+import isucon5.repository.CommentRepository;
+import isucon5.repository.EntryRepository;
+import isucon5.repository.FootprintRepository;
+import isucon5.repository.ProfileRepository;
+import isucon5.repository.RelationRepository;
+import isucon5.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,14 +25,28 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.thymeleaf.dialect.IDialect;
 import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 
-import isucon5.model.*;
-import isucon5.repository.*;
+import javax.servlet.SessionTrackingMode;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 @Controller
@@ -103,13 +120,10 @@ public class App {
 
 		Integer userId = currentUser().getId();
 		Profile profile = profileRepository.findByUserId(userId);
-		List<Entry> entries = entryRepository.findByUserIdOrderByCreatedAtDesc(userId,
-				10);
+		List<Entry> entries = entryRepository.findByUserIdOrderByCreatedAtDesc(userId, 10);
 		List<Comment> commentsForMe = commentRepository.findByUserId(userId);
-		// 友達のエントリをアプリ側でフィルタして10件取得
-		List<Entry> entriesOfFriends = entryRepository.findOrderByCreatedAtDesc(
-				stream -> stream.filter(entry -> isFriend(entry.getUserId())).limit(10)
-						.collect(Collectors.toList()));
+		// 友達のエントリをフィルタして10件取得
+		List<Entry> entriesOfFriends = entryRepository.findFriendEntriesOrderByCreatedAtDesc(userId, 10);
 		// 友達のコメントをアプリ側でフィルタして10件取得
 		List<Comment> commentsOfFriends = commentRepository
 				.findOrderByCreatedAtDesc(stream -> stream.filter(comment -> {
@@ -117,7 +131,7 @@ public class App {
 						return false;
 					}
 					Entry entry = entryRepository.findOne(comment.getEntryId());
-					return !(entry.isPrivate() && !isPermitted(entry.getUserId()));
+					return !entry.isPrivate() || isPermitted(entry.getUserId());
 				}).limit(10).collect(Collectors.toList()));
 		// Relationのリストから、keyがログユーザーじゃない方のuserId, valueが作成時刻なMapを作成
 		Map<Integer, LocalDateTime> friends = relationRepository

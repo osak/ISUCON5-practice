@@ -1,11 +1,6 @@
 package isucon5.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
-
+import isucon5.model.Entry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
@@ -17,7 +12,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import isucon5.model.Entry;
+import java.util.List;
 
 @Repository
 public class EntryRepository {
@@ -68,39 +63,14 @@ public class EntryRepository {
 	}
 
 	@Transactional(readOnly = true)
-	public List<Entry> findOrderByCreatedAtDesc(
-			Function<Stream<Entry>, List<Entry>> streamer) {
-		SqlParameterSource source = new MapSqlParameterSource();
+	public List<Entry> findFriendEntriesOrderByCreatedAtDesc(int userId, int limit) {
+		SqlParameterSource source = new MapSqlParameterSource()
+                .addValue("user_id", userId)
+                .addValue("limit", limit);
 		return jdbcTemplate.query(
-				"SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000", source,
-				rs -> {
-					return streamer.apply(RowMapperSupport.stream(rowMapper, rs));
-				});
-	}
-
-	/**
-	 * findOrderByCreatedAtDescの地味実装版
-	 */
-	@Deprecated
-	@Transactional(readOnly = true)
-	public List<Entry> findByConditionOrderByCreatedAtDesc(Predicate<Entry> condition,
-			int limit) {
-		SqlParameterSource source = new MapSqlParameterSource();
-		return jdbcTemplate.query(
-				"SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000", source,
-				rs -> {
-					List<Entry> entries = new ArrayList<>(limit);
-					while (rs.next()) {
-						Entry entry = rowMapper.mapRow(rs, 0);
-						if (condition.test(entry)) {
-							entries.add(entry);
-						}
-						if (entries.size() >= limit) {
-							break;
-						}
-					}
-					return entries;
-				});
+                "SELECT * FROM entries " +
+                        "WHERE user_id IN (SELECT id FROM relations WHERE one = :user_id) " +
+                        "ORDER BY created_at DESC LIMIT :limit", source, rowMapper);
 	}
 
 	@Transactional
