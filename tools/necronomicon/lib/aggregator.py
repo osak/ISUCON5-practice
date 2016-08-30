@@ -1,12 +1,14 @@
 import log
 
 class StatusCodeAggregator:
-    def __init__(self):
-        pass
+    def __init__(self, status_code):
+        self.status_code = status_code
 
     def aggregate(self, doc):
         freq = {}
         for entry in doc:
+            if entry.status not in self.status_code:
+                continue
             if entry.status not in freq:
                 freq[entry.status] = log.Document()
             freq[entry.status].append(entry)

@@ -21,6 +21,8 @@ class Indentor:
         self.depth -= 1
 
     def _print(self, str):
+        if len(str) == 0:
+            return ''
         lines = str.split('\n')
         if str[-1] == '\n':
             lines.pop()
