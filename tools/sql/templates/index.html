@@ -4,10 +4,24 @@
 <h2>Slowquery Query Language WEB interface</h2>
 
 <form method="post" action="{{ url_for('query') }}" enctype="multipart/form-data">
-    <label for="logfile">FROM</label>
-    <input id="logfile" type="file" name="logfile">
-    <label for="where">WHERE</label>
-    <input id="where" size="80", type="text" name="where" value="{{ query }}">
+    <div class="container">
+        <label for="logfile">FROM</label>
+        <input id="logfile" type="file" name="logfile">
+    </div>
+
+    <div class="container">
+        <label for="where">WHERE</label>
+        <input id="where" size="80" type="text" name="where" value="{{ query }}">
+    </div>
+
+    <div class="container">
+        <strong>GROUP BY</strong>
+        <input id="groupby-int" type="checkbox" name="groupby" value="int" {% if not groupby or 'int' in groupby %}checked{% endif %}>
+        <label for="groupby-int">int litreal</label>
+        <input id="groupby-str" type="checkbox" name="groupby" value="str" {% if not groupby or 'str' in groupby %}checked{% endif %}>
+        <label for="groupby-str">str litreal</label>
+    </div>
+
     <button>Run</button>
 </form>
 
@@ -16,8 +30,10 @@
     <table id="rows_table" class="table">
         <thead>
         <tr>
-            <th>クエリ</th>
-            <th>実行時間</th>
+            <th>query</th>
+            <th>total query_time</th>
+            <th>average query_time</th>
+            <th>counts</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +41,8 @@
         <tr>
             <td>{{ entry.query }}</td>
             <td>{{ entry.query_time }}</td>
+            <td>{{ entry.query_time / entry.counts }}</td>
+            <td>{{ entry.counts }}</td>
         </tr>
         {% endfor %}
         </tbody>
