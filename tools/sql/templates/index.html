@@ -1,0 +1,47 @@
+{% extends "common.html" %}
+{% block content %}
+<h1>SQLweb</h1>
+<h2>Slowquery Query Language WEB interface</h2>
+
+<form method="post" action="{{ url_for('query') }}" enctype="multipart/form-data">
+    <label for="logfile">FROM</label>
+    <input id="logfile" type="file" name="logfile">
+    <label for="where">WHERE</label>
+    <input id="where" size="80", type="text" name="where" value="{{ query }}">
+    <button>Run</button>
+</form>
+
+{% if entries %}
+<div class="container">
+    <table id="rows_table" class="table">
+        <thead>
+        <tr>
+            <th>クエリ</th>
+            <th>実行時間</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.query }}</td>
+            <td>{{ entry.query_time }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#rows_table').DataTable({
+            "order": [
+                [1, 'desc']
+            ]
+        });
+    } );
+</script>
+{% endblock %}
