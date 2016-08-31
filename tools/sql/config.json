@@ -1,0 +1,3 @@
+{
+  "default_log_location": "../../sample_logs/mysql-slow.log"
+}

@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 import argparse
-import json
 import sys
 
 import re
@@ -40,7 +39,7 @@ def parse_headers(headers):
         parsers[field] = number_field_parser(field)
     fields = dict()
     for line in headers:
-        for field_name, parser in parsers.items():
+        for field_name, parser in list(parsers.items()):
             res = parser(line)
             if res is not None:
                 fields[field_name.lower()] = res
@@ -71,28 +70,28 @@ def parse_file(log_file):
 
 def filter_entries(entries, query):
     entries = entries
-    return filter(lambda entry: eval(query, None, entry), entries)
+    return [entry for entry in entries if eval(query, None, entry)]
 
 
 def report_sum_and_average(entries, name):
     total = sum([entry[name] for entry in entries])
     average = total / float(len(entries))
-    print "average {name} = {average} (total: {total})".format(**vars())
+    print("average {name} = {average} (total: {total})".format(**vars()))
 
 
 def main(log_file, query, n_queries):
     filtered_entries = list(filter_entries(parse_file(log_file), query))
-    print "query:", query
-    print "SUMMARY"
-    print "found {} entries".format(len(filtered_entries))
+    print("query:", query)
+    print("SUMMARY")
+    print("found {} entries".format(len(filtered_entries)))
     report_sum_and_average(filtered_entries, "query_time")
     report_sum_and_average(filtered_entries, "lock_time")
     report_sum_and_average(filtered_entries, "rows_sent")
     report_sum_and_average(filtered_entries, "rows_examined")
-    print
-    print "{} SLOWEST queries".format(n_queries)
+    print()
+    print("{} SLOWEST queries".format(n_queries))
     for entry in sorted(filtered_entries, key=lambda entry: entry["query_time"], reverse=True)[:n_queries]:
-        print "{}, {}".format(entry["query_time"], entry["query"].strip())
+        print("{}, {}".format(entry["query_time"], entry["query"].strip()))
 
 
 if __name__ == '__main__':

@@ -2,9 +2,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import slowquery
 import re
+import json
 
-
-DEFAULT_LOG_LOCATION = "../../sample_logs/mysql-slow.log"
+with open("config.json") as conf_file:
+    config = json.load(conf_file)
 
 
 app = Flask(__name__)
@@ -31,7 +32,7 @@ def query():
         return redirect(url_for("hello"))
     log_file = request.files["logfile"]
     if log_file.filename == '':
-        log_file = open(DEFAULT_LOG_LOCATION)
+        log_file = open(config["default_log_location"])
 
     # WHERE clause
     query = request.form["where"]
