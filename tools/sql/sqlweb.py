@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import slowquery
 import re
 import json
+from io import StringIO
+
 
 with open("config.json") as conf_file:
     config = json.load(conf_file)
@@ -27,11 +29,14 @@ query_normalizers = {
 
 @app.route("/query", methods=["GET", "POST"])
 def query():
-    # FROM clause
     if request.method == "GET":
         return redirect(url_for("hello"))
+
+    # FROM clause
     log_file = request.files["logfile"]
-    if log_file.filename == '':
+    if log_file.filename != '':
+        log_file = StringIO(log_file.read().decode())
+    else:
         log_file = open(config["default_log_location"])
 
     # WHERE clause
