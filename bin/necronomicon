@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PYTHON3=python
+python_version=$(python --version 2>&1)
+if echo $python_version | grep 'Python 2.' > /dev/null; then
+    PYTHON3=python3
+fi
+$PYTHON3 $(dirname $0)/../tools/necronomicon/main.py $*
