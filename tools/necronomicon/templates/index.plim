@@ -1,0 +1,41 @@
+-def pretty_list(lst)
+  = lst[0] if len(lst) == 1 else str(lst)
+
+doctype html
+head
+  title Necronomicon
+  link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+  link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css"
+  script src="https://code.jquery.com/jquery-2.1.4.min.js"
+  script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+body
+  .container
+    h1 Necronomicon
+    table#main-table.table.table-striped
+      thead
+        tr
+          th Path
+          th Method
+          th Status
+          th Min(Time)
+          th Median(Time)
+          th Max(Time)
+          th Cumulative(Time)
+          th Count
+      tbody
+        -for row in rows
+          tr
+            td= pretty_list(row.paths)
+            td= pretty_list(row.methods)
+            td= pretty_list(row.status_codes)
+            td= row.min_time
+            td= row.median_time
+            td= row.max_time
+            td= '{0:.3f}'.format(row.cumulative_time)
+            td= row.count
+  script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"
+  script type="text/javascript"
+    $(document).ready(function() {
+        $('#main-table').DataTable({});
+    } );

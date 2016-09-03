@@ -1,14 +1,13 @@
 import log
+import re
 
 class StatusCodeAggregator:
-    def __init__(self, status_code):
-        self.status_code = status_code
+    def __init__(self):
+        pass
 
     def aggregate(self, doc):
         freq = {}
         for entry in doc:
-            if entry.status not in self.status_code:
-                continue
             if entry.status not in freq:
                 freq[entry.status] = log.Document()
             freq[entry.status].append(entry)
@@ -22,21 +21,32 @@ class RequestTimeAggregator:
     def aggregate(self, doc):
         res = {}
         for entry in doc:
-            bin = (entry.request_time // self.resolution) * self.resolution
+            bin = (entry.reqtime // self.resolution) * self.resolution
             if bin not in res:
                 res[bin] = log.Document()
             res[bin].append(entry)
         return res
 
+
 class PathAggregator:
-    def __init__(self):
-        pass
+    def __init__(self, patterns=None):
+        self.patterns = patterns
 
     def aggregate(self, doc):
         res = {}
         for entry in doc:
-            path = entry.request_uri
-            if path not in res:
-                res[path] = log.Document()
-            res[path].append(entry)
+            path = entry.uri
+            pattern = self.determine_pattern(path)
+            if pattern not in res:
+                res[pattern] = log.Document()
+            res[pattern].append(entry)
         return res
+
+    def determine_pattern(self, path):
+        if self.patterns:
+            for pattern in self.patterns:
+                if re.match(pattern, path):
+                    return pattern
+        else:
+            return path
+        return None

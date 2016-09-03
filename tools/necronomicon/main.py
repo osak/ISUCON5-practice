@@ -11,13 +11,15 @@ from presenter import *
 parser = argparse.ArgumentParser()
 parser.add_argument('--time-res', type=int, help='クエリ時間の分解能 (ms)', dest='time_res', default=100)
 parser.add_argument('--status-code', nargs='+', type=int, help='表示するステータスコード', dest='status_code', default=range(1000))
+parser.add_argument('--url-patterns', nargs='+', type=str, help='集計するURLのパターン', dest='url_patterns')
+parser.add_argument('--sort-by', nargs='+', type=str, help='集計するURLのパターン', dest='url_patterns')
 parser.add_argument('filename', help='解析したいファイル名')
 args = parser.parse_args()
 
 with open(args.filename) as f:
     document = log.Document(f)
 
-path_agg = PathAggregator().aggregate(document)
+path_agg = PathAggregator(args.url_patterns).aggregate(document)
 
 for path, doc in path_agg.items():
     status_agg = StatusCodeAggregator(args.status_code).aggregate(doc)
