@@ -2,17 +2,18 @@ import os.path
 import sys
 ROOT_DIR = os.path.dirname(__file__)
 sys.path.append(os.path.join(ROOT_DIR, 'lib'))
+sys.path.append(os.path.join(ROOT_DIR, '..'))
 
 import log
+import common
 from aggregator import *
 from transformer import *
 from flask import Flask
 from flask_mako import MakoTemplates, render_template
 from plim import preprocessor
-import yaml
+import os
 
-with open(os.path.join(ROOT_DIR, 'config.yml')) as f:
-    config = yaml.load(f.read())
+config = common.load_config('necronomicon')
 
 app = Flask(__name__)
 mako = MakoTemplates(app)

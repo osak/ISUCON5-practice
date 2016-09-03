@@ -2,12 +2,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 import slowquery
 import re
-import json
 from io import StringIO
 
+import sys
+import os.path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-with open("config.json") as conf_file:
-    config = json.load(conf_file)
+import common
+config = common.load_config('sqlweb')
 
 
 app = Flask(__name__)
