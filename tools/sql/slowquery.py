@@ -14,8 +14,17 @@ def peek_line(f):
     return line
 
 
+def peek_char(f):
+    pos = f.tell()
+    char = f.read(1)
+    if not char:
+        raise EOFError()
+    f.seek(pos)
+    return char
+
+
 def drop_header(log_file):
-    while peek_line(log_file)[0] != '#':
+    while peek_char(log_file) != '#':
         log_file.readline()
 
 
@@ -50,11 +59,11 @@ def read_entries(log_file):
     try:
         while True:
             headers = []
-            while peek_line(log_file)[0] == '#':
+            while peek_char(log_file) == '#':
                 headers.append(log_file.readline())
             entry = parse_headers(headers)
             queries = []
-            while peek_line(log_file)[0] != '#':
+            while peek_char(log_file) != '#':
                 queries.append(log_file.readline())
             entry["query_full"] = ''.join(queries)
             entry["query"] = queries[-1]
@@ -69,7 +78,6 @@ def parse_file(log_file):
 
 
 def filter_entries(entries, query):
-    entries = entries
     return [entry for entry in entries if eval(query, None, entry)]
 
 
@@ -97,7 +105,7 @@ def main(log_file, query, n_queries):
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
     argparser.add_argument("query", default="True", help="entry selector in Python expression which returns truthy value. An entries' field can be referenced by its name. e.g.: rows_examined==1000")
-    argparser.add_argument("--file", type=file, default=sys.stdin)
+    argparser.add_argument("--file", type=argparse.FileType('r'), default=sys.stdin)
     argparser.add_argument("--n", type=int, default=5)
     args = argparser.parse_args()
     main(args.file, args.query, args.n)
