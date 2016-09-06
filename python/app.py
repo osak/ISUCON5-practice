@@ -238,14 +238,7 @@ def get_index():
             if len(comments_of_friends) >= 10:
                 break
 
-    friends_map = {}
-    with db().cursor() as cursor:
-        cursor.execute("SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC",
-                       args=(current_user_data["id"]))
-        for relation in cursor:
-            key = "another"
-            friends_map.setdefault(relation[key], relation["created_at"])
-    friends = list(friends_map.items())
+    friends_count = db_fetchone("SELECT COUNT(DISTINCT another) FROM relations WHERE one = %s", current_user_data["id"])
     
     query = "SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated " \
             "FROM footprints " \
@@ -262,7 +255,7 @@ def get_index():
       "comments_for_me": comments_for_me,
       "entries_of_friends": entries_of_friends,
       "comments_of_friends": comments_of_friends,
-      "friends": friends,
+      "friends_count": friends_count,
       "footprints": footprints,
     })
 
