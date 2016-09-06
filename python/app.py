@@ -147,6 +147,17 @@ def is_friend(another_id):
     return result and result["cnt"] > 0
 
 
+def get_friend_set():
+    user_id = get_session_user_id()
+    if not user_id:
+        return set()
+    query = "SELECT another FROM relations WHERE one = %s"
+    result = set()
+    for row in db_fetchall(query, user_id):
+        result.add(row["another"])
+    return result
+
+
 def is_friend_account(account_name):
     return is_friend(user_from_account(account_name)["id"])
 
@@ -184,11 +195,12 @@ def get_logout():
 @app.get("/")
 def get_index():
     authenticated()
-    
-    profile = db_fetchone("SELECT * FROM profiles WHERE user_id = %s", current_user()["id"])
+
+    current_user_data = current_user()
+    profile = db_fetchone("SELECT * FROM profiles WHERE user_id = %s", current_user_data["id"])
     
     query = "SELECT * FROM entries WHERE user_id = %s ORDER BY created_at LIMIT 5"
-    entries = db_fetchall(query, current_user()["id"])
+    entries = db_fetchall(query, current_user_data["id"])
     for entry in entries:
         entry["is_private"] = entry["private"] == 1
         entry["title"], entry["content"] = entry["body"].split("\n", 1)
@@ -197,32 +209,36 @@ def get_index():
                             " c.comment AS comment, c.created_at AS created_at " \
                             "FROM comments c JOIN entries e ON c.entry_id = e.id " \
                             "WHERE e.user_id = %s ORDER BY c.created_at DESC LIMIT 10"
-    comments_for_me = db_fetchall(comments_for_me_query, current_user()["id"])
+    comments_for_me = db_fetchall(comments_for_me_query, current_user_data["id"])
     
     entries_of_friends = []
     with db().cursor() as cursor:
         cursor.execute("SELECT entries.* FROM entries INNER JOIN relations ON entries.user_id = relations.one "
-                       "WHERE relations.another = %s ORDER BY entries.created_at DESC LIMIT 10", current_user()["id"])
+                       "WHERE relations.another = %s ORDER BY entries.created_at DESC LIMIT 10", current_user_data["id"])
         for entry in cursor:
             entry["title"] = entry["body"].split("\n")[0]
             entries_of_friends.append(entry)
 
     comments_of_friends = []
+    friends = get_friend_set()
     with db().cursor() as cursor:
-        current_user_id = current_user()["id"]
-        cursor.execute("SELECT comments.* FROM comments "
+        cursor.execute("SELECT comments.* "
+                       "FROM comments "
                        "INNER JOIN entries ON comments.entry_id = entries.id "
-                       "WHERE comments.user_id IN (SELECT another FROM relations WHERE one = %s) AND "
-                       "(entries.private = 0 OR entries.user_id = %s OR entries.user_id IN (SELECT another FROM relations WHERE one = %s)) "
-                       "ORDER BY comments.created_at "
-                       "DESC LIMIT 10", (current_user_id, current_user_id, current_user_id))
+                       "INNER JOIN relations ON entries.user_id = relations.one "
+                       "WHERE entries.is_private = 0 OR entries.user_id = %s OR relations.another = %s "
+                       "ORDER BY comments.created_at DESC LIMIT 100", current_user_data["id"], current_user_data["id"])
         for comment in cursor:
+            if comment["user_id"] not in friends:
+                continue
             comments_of_friends.append(comment)
+            if len(comments_of_friends) >= 10:
+                break
 
     friends_map = {}
     with db().cursor() as cursor:
         cursor.execute("SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC",
-                       args=(current_user()["id"]))
+                       args=(current_user_data["id"]))
         for relation in cursor:
             key = "another"
             friends_map.setdefault(relation[key], relation["created_at"])
@@ -234,10 +250,10 @@ def get_index():
             "GROUP BY user_id, owner_id, DATE(created_at) " \
             "ORDER BY updated DESC " \
             "LIMIT 10"
-    footprints = db_fetchall(query, current_user()["id"])
+    footprints = db_fetchall(query, current_user_data["id"])
     
     return bottle.template("index", {
-      "owner": current_user(),
+      "owner": current_user_data,
       "profile": profile or {},
       "entries": entries,
       "comments_for_me": comments_for_me,
