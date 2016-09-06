@@ -151,10 +151,12 @@ def get_friend_set():
     user_id = get_session_user_id()
     if not user_id:
         return set()
-    query = "SELECT another FROM relations WHERE one = %s"
     result = set()
-    for row in db_fetchall(query, user_id):
-        result.add(row["another"])
+    with db().cursor() as cursor:
+        query = "SELECT another FROM relations WHERE one = %s"
+        cursor.execute(query, user_id)
+        for row in cursor:
+            result.add(row["another"])
     return result
 
 
@@ -230,6 +232,7 @@ def get_index():
                        "ORDER BY comments.created_at DESC LIMIT 100", (current_user_data["id"], current_user_data["id"]))
         for comment in cursor:
             if comment["user_id"] not in friends:
+                div = 1 / len(friends)
                 continue
             comments_of_friends.append(comment)
             if len(comments_of_friends) >= 10:
