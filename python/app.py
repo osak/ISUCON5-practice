@@ -236,7 +236,7 @@ def get_index():
                        "ORDER BY comments.created_at DESC LIMIT 100", (current_user_data["id"], current_user_data["id"]))
         logger.error("queried")
         for comment in cursor:
-            logger.error("comment: " + comment["user_id"])
+            logger.error("comment: " + str(comment["user_id"]))
             if int(comment["user_id"]) not in friends:
                 continue
             comments_of_friends.append(comment)
