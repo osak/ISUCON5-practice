@@ -231,7 +231,7 @@ def get_index():
                        "INNER JOIN entries ON comments.entry_id = entries.id "
                        "INNER JOIN relations ON entries.user_id = relations.one "
                        "WHERE entries.private = 0 OR entries.user_id = %s OR relations.another = %s "
-                       "ORDER BY comments.created_at DESC LIMIT 100", (current_user_data["id"], current_user_data["id"]))
+                       "ORDER BY comments.created_at DESC LIMIT 1000", (current_user_data["id"], current_user_data["id"]))
         for comment in cursor:
             print(str(comment), file=debug)
             if int(comment["user_id"]) not in friends:
