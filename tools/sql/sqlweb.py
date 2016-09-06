@@ -7,6 +7,8 @@ from io import StringIO
 import sys
 import os.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 import common
 config = common.load_config('sqlweb')
@@ -27,6 +29,24 @@ query_normalizers = {
     "int": int_literal_normalizer,
     "str": str_literal_normalizer
 }
+
+
+def find_nplus1(entries):
+    prev = None
+    res = []
+    for e in entries:
+        if prev is not None and prev["query"] == e["query"]:
+            res[-1]["total_time"] += e["query_time"]
+            res[-1]["counts"] += 1
+        else:
+            val = dict()
+            val["prev_query"] = prev["query"] if prev else None
+            val["query"] = e["query"]
+            val["total_time"] = e["query_time"]
+            val["counts"] = 1
+            prev = e
+            res.append(val)
+    return res
 
 
 @app.route("/query", methods=["GET", "POST"])
@@ -53,6 +73,7 @@ def query():
         query_normalizer = query_normalizers[groupby]
         for entry in entries:
             entry["query"] = query_normalizer(entry["query"])
+    nplus1s = find_nplus1(entries)
 
     groups = dict()
     for entry in entries:
@@ -66,7 +87,8 @@ def query():
     context = {
         "query": query,
         "entries": groups.values(),
-        "groupby": groupbys
+        "groupby": groupbys,
+        "nplus1s": nplus1s
     }
     log_file.close()
     return render_template('index.html', **context)
