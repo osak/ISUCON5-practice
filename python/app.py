@@ -228,7 +228,7 @@ def get_index():
     with db().cursor() as cursor:
         cursor.execute("SELECT comments.*, entries.private, entries.user_id AS entry_user_id "
                        "FROM comments "
-                       "INNER JOIN entries ON entries.id = comments.entry_id "
+                       "LEFT JOIN entries ON entries.id = comments.entry_id "
                        "ORDER BY comments.created_at DESC LIMIT 1000")
         for comment in cursor:
             if comment["user_id"] not in friends:
