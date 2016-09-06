@@ -391,13 +391,11 @@ def get_footprints():
 @app.get("/friends")
 def get_friends():
     authenticated()
-    query = "SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC"
+    query = "SELECT another, created_at FROM relations WHERE one = %s"
     relations = db_fetchall(query, current_user()["id"])
-    friends_map = {}
+    friends = []
     for relation in relations:
-        key = "another"
-        friends_map.setdefault(relation[key], relation["created_at"])
-    friends = list(friends_map.items())
+        friends.append(relation["another"], relation["created_at"])
     return bottle.template("friends", {"friends": friends})
 
 
