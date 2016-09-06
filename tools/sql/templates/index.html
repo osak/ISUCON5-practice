@@ -52,8 +52,11 @@
         <tr>
             <th>previous query</th>
             <th>duplicated queries</th>
-            <th>total query_time</th>
             <th>counts</th>
+            <th>total query_time</th>
+            <th>total counts</th>
+            <th>average query_time</th>
+            <th>average counts</th>
         </tr>
         </thead>
         <tbody>
@@ -61,8 +64,11 @@
         <tr>
             <td>{{ nplus1.prev_query }}</td>
             <td>{{ nplus1.query }}</td>
-            <td>{{ nplus1.total_time }}</td>
             <td>{{ nplus1.counts }} </td>
+            <td>{{ nplus1.total_time }}</td>
+            <td>{{ nplus1.total_counts }} </td>
+            <td>{{ nplus1.average_total_time }}</td>
+            <td>{{ nplus1.average_counts }} </td>
         </tr>
         {% endfor %}
         </tbody>
