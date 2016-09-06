@@ -26,6 +26,9 @@ PREFECTURES = [
 ]
 
 
+user_cache = None
+
+
 def abort_authentication_error():
     set_session_user_id(None)
     response = bottle.HTTPResponse(status=401, body=bottle.template("login", {"message": "ログインに失敗しました"}))
@@ -123,11 +126,14 @@ def authenticated():
 
 
 def get_user(user_id):
-    query = "SELECT * FROM users WHERE id = %s"
-    result = db_fetchone(query, user_id)
-    if not result:
+    global user_cache
+    if user_cache is None:
+        user_cache = {}
+        for user in db_fetchall('SELECT * FROM users'):
+            user_cache[int(user['id'])] = user
+    if user_id not in user_cache:
         abort_content_not_found()
-    return result
+    return user_cache[user_id]
 
 
 def user_from_account(account_name):
