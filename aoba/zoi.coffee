@@ -31,7 +31,7 @@ benchmark = (robot, res) ->
 module.exports = (robot) ->
   robot.hear /^今日も[1１一]日$/, (res) ->
     res.send "がんばるぞい！"
-  robot.respond /(\w+)[をの]?デプロイ/, (res) ->
+  robot.respond /(\w+)\s*[をの]?デプロイ/, (res) ->
     deploy robot, res, res.match[1]
   robot.respond /deploy\s+(\w+)/, (res) ->
     deploy robot, res, res.match[1]
