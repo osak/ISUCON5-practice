@@ -292,6 +292,7 @@ public class BootstrapChecker extends Scenario {
       String user2Path = String.format("/profile/%s", param2.accountName);
       String user3Path = String.format("/profile/%s", param3.accountName);
 
+/*
       getAndCheck(session, "/footprints", "CHECK LEFT FOOTPRINTS OF OTHERS", (check) -> {
           check.isStatus(200);
           if (check.document().select("#footprints ul li.footprints-footprint").stream()
@@ -304,6 +305,7 @@ public class BootstrapChecker extends Scenario {
             check.addViolation("友だちリストに友だちになったばかりのユーザが表示されていません");
           }
       });
+      */
     }
     if (checking.existingEntryId != null) {
       getAndCheck(session2, "/", "SHOW INDEX TO FIND FRIEND'S COMMENT", (check) -> {
