@@ -229,7 +229,7 @@ def get_index():
     permitteds = set(friends)
     permitteds.add(current_user_data["id"])
     with db().cursor() as cursor:
-        cursor.execute("SELECT comments.*, entries.user_id as entry_owner_id FROM comments JOIN entries ON comments.entry_id = entries.id ORDER BY created_at DESC LIMIT 1000")
+        cursor.execute("SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000")
         for comment in cursor:
             if comment["user_id"] not in friends:
                 continue
