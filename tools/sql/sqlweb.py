@@ -7,8 +7,6 @@ from io import StringIO
 import sys
 import os.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 import common
 config = common.load_config('sqlweb')
