@@ -391,7 +391,7 @@ def get_footprints():
 @app.get("/friends")
 def get_friends():
     authenticated()
-    query = "SELECT another, created_at FROM relations WHERE one = %s"
+    query = "SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC"
     relations = db_fetchall(query, current_user()["id"])
     friends = []
     for relation in relations:
