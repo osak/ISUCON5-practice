@@ -226,7 +226,7 @@ def get_index():
     
     friends_map = {}
     with db().cursor() as cursor:
-        cursor.execute("SELECT another FROM relations WHERE one = %s ORDER BY created_at DESC",
+        cursor.execute("SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC",
                        args=(current_user()["id"], current_user()["id"]))
         for relation in cursor:
             key = "another"
