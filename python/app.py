@@ -152,11 +152,8 @@ def get_friend_set():
     if not user_id:
         return set()
     result = set()
-    with db().cursor() as cursor:
-        query = "SELECT another FROM relations WHERE one = %s"
-        cursor.execute(query, user_id)
-        for row in cursor:
-            result.add(int(row["another"]))
+    for row in db_fetchall("SELECT another FROM relations WHERE one = %s", user_id):
+        result.add(int(row["another"]))
     return result
 
 
