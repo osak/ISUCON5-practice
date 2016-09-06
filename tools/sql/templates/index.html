@@ -47,6 +47,26 @@
         {% endfor %}
         </tbody>
     </table>
+    <table id="nplus1_table" class="table">
+        <thead>
+        <tr>
+            <th>previous query</th>
+            <th>duplicated queries</th>
+            <th>total query_time</th>
+            <th>counts</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for nplus1 in nplus1s %}
+        <tr>
+            <td>{{ nplus1.prev_query }}</td>
+            <td>{{ nplus1.query }}</td>
+            <td>{{ nplus1.total_time }}</td>
+            <td>{{ nplus1.counts }} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endif %}
 {% endblock %}
@@ -55,7 +75,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-        $('#rows_table').DataTable({
+        $('.table').DataTable({
             "order": [
                 [1, 'desc']
             ]

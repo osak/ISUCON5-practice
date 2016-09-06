@@ -1,6 +1,8 @@
 *.class
 *.idea
 .*.swp
+*.pyc
+__pycache__
 tsubasa_id_rsa
 
 java/target
