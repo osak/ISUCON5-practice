@@ -226,15 +226,13 @@ def get_index():
     permitteds = set(friends)
     permitteds.add(current_user_data["id"])
     with db().cursor() as cursor:
-        cursor.execute("SELECT comments.*, entries.private, entries.user_id AS entry_user_id "
-                       "FROM comments "
-                       "LEFT JOIN entries ON entries.id = comments.entry_id "
-                       "ORDER BY comments.created_at DESC LIMIT 1000")
+        cursor.execute("SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000")
         for comment in cursor:
             if comment["user_id"] not in friends:
                 continue
-            comment["is_private"] = (comment["private"] == 1)
-            if comment["is_private"] and comment["entry_user_id"] not in permitteds:
+            entry = db_fetchone("SELECT private, user_id FROM entries WHERE id = %s", comment["entry_id"])
+            entry["is_private"] = (entry["private"] == 1)
+            if entry["is_private"] and entry["user_id"] not in permitteds:
                 continue
             comments_of_friends.append(comment)
             if len(comments_of_friends) >= 10:
