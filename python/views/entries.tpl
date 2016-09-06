@@ -36,15 +36,7 @@
         <div class="text-danger entry-private">範囲: 友だち限定公開</div>
       % end
       <div class="entry-created-at">更新日時: {{entry["created_at"]}}</div>
-      <div class="entry-comments">コメント:
-        <%
-          with db().cursor() as cursor:
-              cursor.execute("SELECT COUNT(*) AS c FROM comments WHERE entry_id = %s", entry["id"])
-              result = cursor.fetchone()
-              comment_count = result["c"] if result else 0
-          end
-        %>
-        {{comment_count}}件</div>
+      <div class="entry-comments">コメント:{{comment_counts[entry["id"]}}件</div>
     </div>
   % end
 </div>

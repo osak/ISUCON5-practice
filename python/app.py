@@ -318,13 +318,23 @@ def get_entries(account_name):
     else:
       query = "SELECT * FROM entries WHERE user_id = %s AND private = 0 ORDER BY created_at DESC LIMIT 20"
     entries = db_fetchall(query, owner["id"])
+
+    comment_counts = db_fetchall("SELECT entries.id AS id, count(1) AS comments_count "
+                                 "FROM comments "
+                                 "INNER JOIN entries ON comments.entry_id = entries.id "
+                                 "WHERE entries.user_id = %s "
+                                 "GROUP BY entries.id", owner["id"])
+    comment_counts_dict = {}
+    for comment_count in comment_counts:
+        comment_counts_dict[comment_count["id"]] = comment_count["comments_count"]
     for entry in entries:
         entry["is_private"] = entry["private"] == 1
         entry["title"], entry["content"] = entry["body"].split("\n", 1)
     mark_footprint(owner["id"])
     return bottle.template("entries", {
         "owner": get_user(owner["id"]),
-        "entries": entries, 
+        "entries": entries,
+        "comments_counts": comment_counts_dict,
         "myself": current_user()["id"] == owner["id"],
     })
 
