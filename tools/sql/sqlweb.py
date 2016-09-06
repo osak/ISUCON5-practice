@@ -44,7 +44,25 @@ def find_nplus1(entries):
             val["counts"] = 1
             prev = e
             res.append(val)
-    return res
+    res2 = dict()
+    for r in res:
+        key = (r["prev_query"], r["query"])
+        if key not in res2:
+            val = dict()
+            val["prev_query"] = r["prev_query"]
+            val["query"] = r["query"]
+            val["counts"] = 0
+            val["total_time"] = 0
+            val["total_counts"] = 0
+            res2[key] = val
+        cur = res2[key]
+        cur["counts"] += 1
+        cur["total_time"] += r["total_time"]
+        cur["total_counts"] += r["counts"]
+    for r2 in res2.values():
+        r2["average_total_time"] = r2["total_time"] / r2["counts"]
+        r2["average_counts"] = r2["total_counts"] / r2["counts"]
+    return res2.values()
 
 
 @app.route("/query", methods=["GET", "POST"])
