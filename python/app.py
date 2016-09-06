@@ -209,18 +209,16 @@ def get_index():
 
     comments_of_friends = []
     with db().cursor() as cursor:
-        cursor.execute("SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000")
+        current_user_id = current_user()["id"]
+        cursor.execute("SELECT comments.* FROM comments "
+                       "INNER JOIN entries ON comments.entry_id = entries.id "
+                       "WHERE comments.user_id IN (SELECT another FROM relations WHERE one = %s) AND "
+                       "(entries.private = 0 OR entries.user_id = %s OR entries.user_id IN (SELECT another FROM relations WHERE one = %s)) "
+                       "ORDER BY comments.created_at "
+                       "DESC LIMIT 10", current_user_id, current_user_id)
         for comment in cursor:
-            if not is_friend(comment["user_id"]):
-                continue
-            entry = db_fetchone("SELECT * FROM entries WHERE id = %s", comment["entry_id"])
-            entry["is_private"] = (entry["private"] == 1)
-            if entry["is_private"] and not permitted(entry["user_id"]):
-                continue
             comments_of_friends.append(comment)
-            if len(comments_of_friends) >= 10:
-                break
-    
+
     friends_map = {}
     with db().cursor() as cursor:
         cursor.execute("SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC",
