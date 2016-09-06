@@ -12,7 +12,7 @@
       <dt>性別</dt><dd id="prof-sex">{{profile.get("sex") or "未入力"}}</dd>
       <dt>誕生日</dt><dd id="prof-birthday">{{profile.get("birthday") or "未入力"}}</dd>
       <dt>住んでいる県</dt><dd id="prof-pref">{{profile.get("pref") or "未入力"}}</dd>
-      <dt>友だちの人数</dt><dd id="prof-friends"><a href="/friends">{{len(friends)}}人</a></dd>
+      <dt>友だちの人数</dt><dd id="prof-friends"><a href="/friends">{{friends_count}}人</a></dd>
     </dl>
   </div>
   <div class="col-md-4">
