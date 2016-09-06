@@ -35,5 +35,7 @@ module.exports = (robot) ->
     deploy robot, res, res.match[1]
   robot.respond /deploy\s+(\w+)/, (res) ->
     deploy robot, res, res.match[1]
+  robot.respond /(\w+)\s+deploy/, (res) ->
+    deploy robot, res, res.match[1]
   robot.respond /ベンチマーク|benchmark/, (res) ->
     benchmark robot, res
