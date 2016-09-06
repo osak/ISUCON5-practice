@@ -49,4 +49,4 @@ class PathAggregator:
                     return pattern
         else:
             return path
-        return None
+        return path

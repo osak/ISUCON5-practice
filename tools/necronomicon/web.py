@@ -31,7 +31,7 @@ def load_log():
 def index():
     document = load_log()
     rows = []
-    for doc1 in PathAggregator().aggregate(document).values():
+    for doc1 in PathAggregator(patterns=[r'/diary/comment/\d+', r'/diary/entries/.+', r'/friends/.+']).aggregate(document).values():
         for doc2 in StatusCodeAggregator().aggregate(doc1).values():
             rows.append(BasicTransformer().transform(doc2))
     return render_template('index.plim', rows=rows)
