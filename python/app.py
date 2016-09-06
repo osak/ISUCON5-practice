@@ -218,7 +218,7 @@ def get_index():
         cursor.execute("SELECT entries.* FROM entries INNER JOIN relations ON entries.user_id = relations.one "
                        "WHERE relations.another = %s ORDER BY entries.created_at DESC LIMIT 10", current_user_data["id"])
         for entry in cursor:
-            entry["title"] = entry["body"].split("\n")[0]
+            entry["title"] = entry["body"].split("\n", 1)[0]
             entries_of_friends.append(entry)
 
     comments_of_friends = []
