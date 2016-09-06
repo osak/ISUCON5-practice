@@ -201,15 +201,12 @@ def get_index():
     
     entries_of_friends = []
     with db().cursor() as cursor:
-        cursor.execute("SELECT * FROM entries ORDER BY created_at DESC LIMIT 1000")
+        cursor.execute("SELECT * FROM entries INNER JOIN relations ON entries.user_id = relations.one "
+                       "WHERE another = %s ORDER BY created_at DESC LIMIT 10", current_user()["id"])
         for entry in cursor:
-            if not is_friend(entry["user_id"]):
-                continue
             entry["title"] = entry["body"].split("\n")[0]
             entries_of_friends.append(entry)
-            if len(entries_of_friends) >= 10:
-                break
-    
+
     comments_of_friends = []
     with db().cursor() as cursor:
         cursor.execute("SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000")
