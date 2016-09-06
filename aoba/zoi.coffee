@@ -1,4 +1,4 @@
-apikey = require('./apikey')
+apikey = require('/var/isucon/hubot/scripts/apikey')
 
 run_job = (robot, guid, callback) ->
   robot.http("http://#{apikey.server_name}/api/14/job/#{guid}/run")
@@ -15,7 +15,10 @@ deploy = (robot, res, product) ->
         res.reply "なんかうまく行きませんでした…… #{err}"
       else
         data = JSON.parse body
-        res.reply "デプロイしときました！ #{data.permalink}"  
+        msg = 'デプロイしときました！'
+        if product.toLowerCase() == 'aoba'
+          msg = 'な、なんか自分をデプロイするのってドキドキしますね……'
+        res.reply "#{msg} #{data.permalink}"  
 
 benchmark = (robot, res) ->
   run_job robot, apikey.benchmark_guid, (err, _, body) ->
