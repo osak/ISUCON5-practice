@@ -395,7 +395,7 @@ def get_friends():
     relations = db_fetchall(query, current_user()["id"])
     friends = []
     for relation in relations:
-        friends.append(relation["another"], relation["created_at"])
+        friends.append((relation["another"], relation["created_at"]))
     return bottle.template("friends", {"friends": friends})
 
 
