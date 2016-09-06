@@ -215,7 +215,7 @@ def get_index():
                        "WHERE comments.user_id IN (SELECT another FROM relations WHERE one = %s) AND "
                        "(entries.private = 0 OR entries.user_id = %s OR entries.user_id IN (SELECT another FROM relations WHERE one = %s)) "
                        "ORDER BY comments.created_at "
-                       "DESC LIMIT 10", current_user_id, current_user_id)
+                       "DESC LIMIT 10", current_user_id, current_user_id, current_user_id)
         for comment in cursor:
             comments_of_friends.append(comment)
 
