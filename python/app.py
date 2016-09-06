@@ -226,10 +226,10 @@ def get_index():
     
     friends_map = {}
     with db().cursor() as cursor:
-        cursor.execute("SELECT * FROM relations WHERE one = %s OR another = %s ORDER BY created_at DESC",
+        cursor.execute("SELECT another FROM relations WHERE one = %s ORDER BY created_at DESC",
                        args=(current_user()["id"], current_user()["id"]))
         for relation in cursor:
-            key = "another" if relation["one"] == current_user()["id"] else "one"
+            key = "another"
             friends_map.setdefault(relation[key], relation["created_at"])
     friends = list(friends_map.items())
     
