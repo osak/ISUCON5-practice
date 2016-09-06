@@ -142,8 +142,8 @@ def is_friend(another_id):
     user_id = get_session_user_id()
     if not user_id:
         return False
-    query = "SELECT COUNT(1) AS cnt FROM relations WHERE (one = %s AND another = %s) OR (one = %s AND another = %s)"
-    result = db_fetchone(query, user_id, another_id, another_id, user_id)
+    query = "SELECT COUNT(1) AS cnt FROM relations WHERE one = %s AND another = %s"
+    result = db_fetchone(query, user_id, another_id)
     return result and result["cnt"] > 0
 
 
@@ -201,8 +201,8 @@ def get_index():
     
     entries_of_friends = []
     with db().cursor() as cursor:
-        cursor.execute("SELECT * FROM entries INNER JOIN relations ON entries.user_id = relations.one "
-                       "WHERE another = %s ORDER BY created_at DESC LIMIT 10", current_user()["id"])
+        cursor.execute("SELECT entries.* FROM entries INNER JOIN relations ON entries.user_id = relations.one "
+                       "WHERE relations.another = %s ORDER BY entries.created_at DESC LIMIT 10", current_user()["id"])
         for entry in cursor:
             entry["title"] = entry["body"].split("\n")[0]
             entries_of_friends.append(entry)
