@@ -4,10 +4,6 @@ import os
 import bottle
 import pymysql
 
-import logging
-
-logger = logging.getLogger(__name__)
-
 app = bottle.default_app()
 app.config.load_dict({
     "db": {
@@ -226,7 +222,9 @@ def get_index():
 
     comments_of_friends = []
     friends = get_friend_set()
-    logger.error(str(friends))
+    import io
+    debug = io.StringIO()
+    print(str(friends), file=debug)
     with db().cursor() as cursor:
         cursor.execute("SELECT comments.* "
                        "FROM comments "
@@ -234,9 +232,8 @@ def get_index():
                        "INNER JOIN relations ON entries.user_id = relations.one "
                        "WHERE entries.private = 0 OR entries.user_id = %s OR relations.another = %s "
                        "ORDER BY comments.created_at DESC LIMIT 100", (current_user_data["id"], current_user_data["id"]))
-        logger.error("queried")
         for comment in cursor:
-            logger.error("comment: " + str(comment["user_id"]))
+            print(str(comment), file=debug)
             if int(comment["user_id"]) not in friends:
                 continue
             comments_of_friends.append(comment)
@@ -269,6 +266,7 @@ def get_index():
       "comments_of_friends": comments_of_friends,
       "friends": friends,
       "footprints": footprints,
+      "debug": debug.getvalue()
     })
 
 
