@@ -235,7 +235,7 @@ def get_index():
             if len(comments_of_friends) >= 10:
                 break
 
-    friends_count = db_fetchone("SELECT COUNT(DISTINCT another) FROM relations WHERE one = %s", current_user_data["id"])
+    friends_count = db_fetchone("SELECT COUNT(DISTINCT another) FROM relations WHERE one = %s", current_user_data["id"])["COUNT(DISTINCT another)"]
     
     query = "SELECT user_id, owner_id, DATE(created_at) AS date, MAX(created_at) AS updated " \
             "FROM footprints " \
