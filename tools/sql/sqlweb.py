@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 def int_literal_normalizer(query):
-    return re.sub("(?<=[\s^=])\d+", "{INT_LIT}", query)
+    return re.sub("\b\d+", "{INT_LIT}", query)
 
 
 def str_literal_normalizer(query):
