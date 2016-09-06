@@ -377,11 +377,11 @@ def get_footprints():
 @app.get("/friends")
 def get_friends():
     authenticated()
-    query = "SELECT * FROM relations WHERE one = %s OR another = %s ORDER BY created_at DESC"
-    relations = db_fetchall(query, current_user()["id"], current_user()["id"])
+    query = "SELECT another, created_at FROM relations WHERE one = %s ORDER BY created_at DESC"
+    relations = db_fetchall(query, current_user()["id"])
     friends_map = {}
     for relation in relations:
-        key = "another" if relation["one"] == current_user()["id"] else "one"
+        key = "another"
         friends_map.setdefault(relation[key], relation["created_at"])
     friends = list(friends_map.items())
     return bottle.template("friends", {"friends": friends})
