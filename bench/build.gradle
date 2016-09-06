@@ -19,6 +19,8 @@ compileJava {
         }
     }
     options.encoding = 'UTF-8'
+    options.fork = true
+    options.forkOptions.executable = '/usr/local/java/jdk1.8.0_102/bin/javac'
 }
 
 mainClassName = 'net.isucon.isucon5q.bench.Runner'
