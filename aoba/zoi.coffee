@@ -1,4 +1,4 @@
-apikey = require('./apikey')
+apikey = require('/var/isucon/hubot/scripts/apikey')
 
 run_job = (robot, guid, callback) ->
   robot.http("http://#{apikey.server_name}/api/14/job/#{guid}/run")
