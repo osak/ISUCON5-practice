@@ -36,7 +36,7 @@
         <div class="text-danger entry-private">範囲: 友だち限定公開</div>
       % end
       <div class="entry-created-at">更新日時: {{entry["created_at"]}}</div>
-      <div class="entry-comments">コメント:{{comment_counts[entry["id"]]}}件</div>
+      <div class="entry-comments">コメント:{{comments_counts[entry["id"]]}}件</div>
     </div>
   % end
 </div>
