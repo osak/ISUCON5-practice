@@ -1,6 +1,5 @@
 % rebase("layout")
 <h2>ISUxi index</h2>
-{{debug}}
 <div class="row panel panel-primary" id="prof">
   <div class="col-md-12 panel-title" id="prof-nickname">{{owner["nick_name"]}}</div>
   <div class="col-md-12"><a href="/profile/{{owner["account_name"]}}">プロフィール</a></div>
