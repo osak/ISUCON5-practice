@@ -228,18 +228,16 @@ def get_index():
     friends = get_friend_set()
     permitteds = set(friends)
     permitteds.add(current_user_data["id"])
-    with db().cursor() as cursor:
-        cursor.execute("SELECT * FROM comments ORDER BY created_at DESC LIMIT 1000")
-        for comment in cursor:
-            if comment["user_id"] not in friends:
-                continue
-            entry = db_fetchone("SELECT private, user_id FROM entries WHERE id = %s", comment["entry_id"])
-            entry["is_private"] = (entry["private"] == 1)
-            if entry["is_private"] and entry["user_id"] not in permitteds:
-                continue
-            comments_of_friends.append(comment)
-            if len(comments_of_friends) >= 10:
-                break
+
+    comment_specs = db_fetchall("SELECT id, user_id FROM comments ORDER BY created_at DESC LIMIT 1000")
+    comment_specs = [comment_spec for comment_spec in comment_specs if comment_spec['user_id'] in friends]
+    comment_ids = ','.join([spec['id'] for spec in comment_specs])
+    friend_ids = ','.join(friends)
+    comments_of_friends = db_fetchall("""
+SELECT comments.*, entries.user_id as entry_owner_id FROM comments JOIN entries ON comments.entry_id = entries.id
+  WHERE comments.id IN (%s) AND (entries.private = 0 OR entries.user_id IN (%s))
+  ORDER BY comments.created_at DESC LIMIT 10
+""", (comment_ids, friend_ids))
 
     friends_count = db_fetchone("SELECT COUNT(DISTINCT another) FROM relations WHERE one = %s", current_user_data["id"])["COUNT(DISTINCT another)"]
     
