@@ -67,8 +67,10 @@ module.exports = (robot) ->
       when 'failure'
         attachment.pretext = "うぅ、#{job_name}に失敗しちゃった…… "
         attachment.color = 'danger'
-    robot.send {
-      attachments: [attachment]
+    robot.send {room: 'isucon'}, {
+      attachments: [attachment],
+      text: attachment.pretext,
+      as_user: true
     }
   svr = app.listen 5130, () ->
     process.on 'exit', () ->
