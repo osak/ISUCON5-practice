@@ -1,4 +1,5 @@
 apikey = require('/var/isucon/hubot/scripts/apikey')
+xml2json = require('xml2json')
 
 run_job = (robot, guid, callback) ->
   robot.http("http://#{apikey.server_name}/api/14/job/#{guid}/run")
@@ -39,3 +40,27 @@ module.exports = (robot) ->
     deploy robot, res, res.match[1]
   robot.respond /ベンチマーク|benchmark/, (res) ->
     benchmark robot, res
+  robot.router.post '/rundeck/notify', (req, res) ->
+    data = if req.body.payload? then xml2json.toJson(req.body.payload) else req.body
+    trigger = data.trigger
+    status = data.status
+    execution = data.executions[0]
+    permalink = execution.permalink
+    job_name = execution.job.name
+    attachment = {
+      title: "#{job_name} ##{data.executionId}",
+      title_link: permalink
+    }
+    switch trigger
+      when 'start'
+        attachment.pretext = "#{job_name}を始めました！"
+        attachment.color = 'warning'
+      when 'success'
+        attachment.pretext = "八神さん、#{job_name}が終わりました！"
+        attachment.color = 'good'
+      when 'failure'
+        attachment.pretext = "うぅ、#{job_name}に失敗しちゃった…… "
+        attachment.color = 'danger'
+    robot.send {
+      attachments: [attachment]
+    }
