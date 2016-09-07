@@ -42,13 +42,13 @@ module.exports = (robot) ->
     benchmark robot, res
   robot.router.post '/rundeck/notify', (req, res) ->
     data = if req.body.payload? then xml2json.toJson(req.body.payload) else req.body
-    trigger = data.trigger
-    status = data.status
-    execution = data.executions[0]
+    trigger = data.notification.trigger
+    status = data.notification.status
+    execution = data.notification.executions[0]
     permalink = execution.permalink
     job_name = execution.job.name
     attachment = {
-      title: "#{job_name} ##{data.executionId}",
+      title: "#{job_name} ##{data.notification.executionId}",
       title_link: permalink
     }
     switch trigger
