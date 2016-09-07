@@ -22,10 +22,10 @@ deploy = (robot, res, product) ->
         res.reply "なんかうまく行きませんでした…… #{err}"
       else
         data = JSON.parse body
-        msg = 'デプロイしときました！'
+        msg = 'はーい、わかりました！'
         if product.toLowerCase() == 'aoba'
           msg = 'な、なんか自分をデプロイするのってドキドキしますね……'
-        res.reply "#{msg} #{data.permalink}"  
+        res.reply msg
 
 benchmark = (robot, res) ->
   run_job robot, apikey.benchmark_guid, (err, _, body) ->
@@ -33,7 +33,7 @@ benchmark = (robot, res) ->
       res.reply "失敗しちゃいました…… #{err}"
     else
       data = JSON.parse body
-      res.reply "よーし、張り切ってやっちゃいますよー！ #{data.permalink}"
+      res.reply 'よーし、張り切ってやっちゃいますよー！'
 
 module.exports = (robot) ->
   robot.hear /^今日も[1１一]日$/, (res) ->
@@ -53,19 +53,20 @@ module.exports = (robot) ->
     execution = data.notification.executions.execution
     permalink = execution.href
     job_name = execution.job.name
+    job_description = execution.job.description || job_name
     attachment = {
       title: "#{job_name} ##{data.notification.executionId}",
       title_link: permalink
     }
     switch trigger
       when 'start'
-        attachment.pretext = "#{job_name}を始めました！"
+        attachment.pretext = "#{job_description}を始めました！"
         attachment.color = 'warning'
       when 'success'
-        attachment.pretext = "八神さん、#{job_name}が終わりました！"
+        attachment.pretext = "八神さん、#{job_description}が終わりました！"
         attachment.color = 'good'
       when 'failure'
-        attachment.pretext = "うぅ、#{job_name}に失敗しちゃった…… "
+        attachment.pretext = "うぅ、#{job_description}に失敗しちゃった…… "
         attachment.color = 'danger'
     robot.send {room: 'isucon'}, {
       attachments: [attachment],
