@@ -60,17 +60,17 @@ module.exports = (robot) ->
     }
     switch trigger
       when 'start'
-        attachment.pretext = "#{job_description}を始めました！"
+        pretext = "#{job_description}を始めました！"
         attachment.color = 'warning'
       when 'success'
-        attachment.pretext = "八神さん、#{job_description}が終わりました！"
+        pretext = "八神さん、#{job_description}が終わりました！"
         attachment.color = 'good'
       when 'failure'
-        attachment.pretext = "うぅ、#{job_description}に失敗しちゃった…… "
+        pretext = "うぅ、#{job_description}に失敗しちゃった…… "
         attachment.color = 'danger'
     robot.send {room: 'isucon'}, {
       attachments: [attachment],
-      text: attachment.pretext,
+      text: pretext,
       as_user: true
     }
   svr = app.listen 5130, () ->
