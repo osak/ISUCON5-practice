@@ -78,8 +78,7 @@
     <div class="friend-comment">
       <ul class="list-group">
         % comment_owner = get_user(comment["user_id"])
-        % entry = db_fetchone("SELECT * FROM entries WHERE id = %s", comment["entry_id"])
-        % entry_owner = get_user(entry["user_id"])
+        % entry_owner = get_user(comment["entry_owner_id"])
         <li class="list-group-item comment-from-to">
           <a href="/profile/{{comment_owner["account_name"]}}">{{comment_owner["nick_name"]}}さん</a>から
           <a href="/profile/{{entry_owner["account_name"]}}">{{entry_owner["nick_name"]}}さん</a>へのコメント:
