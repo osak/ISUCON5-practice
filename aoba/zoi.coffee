@@ -1,5 +1,11 @@
 apikey = require('/var/isucon/hubot/scripts/apikey')
 xml2json = require('xml2json')
+express = require('express')
+body_parser = require('body-parser')
+process = require('process')
+
+app = express()
+app.use body_parser.text({type: '*/*'})
 
 run_job = (robot, guid, callback) ->
   robot.http("http://#{apikey.server_name}/api/14/job/#{guid}/run")
@@ -40,12 +46,12 @@ module.exports = (robot) ->
     deploy robot, res, res.match[1]
   robot.respond /ベンチマーク|benchmark/, (res) ->
     benchmark robot, res
-  robot.router.post '/rundeck/notify', (req, res) ->
-    data = if req.body.payload? then xml2json.toJson(req.body.payload) else req.body
+  app.post '/rundeck/notify', (req, res) ->
+    data = JSON.parse xml2json.toJson req.body
     trigger = data.notification.trigger
     status = data.notification.status
-    execution = data.notification.executions[0]
-    permalink = execution.permalink
+    execution = data.notification.executions.execution
+    permalink = execution.href
     job_name = execution.job.name
     attachment = {
       title: "#{job_name} ##{data.notification.executionId}",
@@ -61,6 +67,9 @@ module.exports = (robot) ->
       when 'failure'
         attachment.pretext = "うぅ、#{job_name}に失敗しちゃった…… "
         attachment.color = 'danger'
-    res.send {
+    robot.send {
       attachments: [attachment]
     }
+  svr = app.listen 5130, () ->
+    process.on 'exit', () ->
+      svr.close()
