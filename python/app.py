@@ -110,8 +110,7 @@ def current_user():
     except AttributeError:
         user_id = get_session_user_id()
         if user_id:
-            query = "SELECT id, account_name, nick_name, email FROM users WHERE id = %s"
-            bottle.request.user = db_fetchone(query, get_session_user_id())
+            bottle.request.user = get_user_or_none(user_id)
             if not bottle.request.user:
                 set_session_user_id(None)
                 abort_authentication_error()
@@ -125,13 +124,18 @@ def authenticated():
         bottle.redirect("/login", 302)
 
 
-def get_user(user_id):
+def get_user_or_none(user_id):
     global user_cache
     if user_cache is None:
         user_cache = {}
         for user in db_fetchall('SELECT * FROM users'):
             user_cache[int(user['id'])] = user
-    if user_id not in user_cache:
+    return user_cache.get(user_id, None)
+
+
+def get_user(user_id):
+    user = get_user_or_none(user_id)
+    if user is None:
         abort_content_not_found()
     return user_cache[user_id]
 
