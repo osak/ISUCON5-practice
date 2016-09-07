@@ -61,6 +61,6 @@ module.exports = (robot) ->
       when 'failure'
         attachment.pretext = "うぅ、#{job_name}に失敗しちゃった…… "
         attachment.color = 'danger'
-    robot.send {
+    res.send {
       attachments: [attachment]
     }
