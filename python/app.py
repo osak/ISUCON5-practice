@@ -237,7 +237,7 @@ def get_index():
 SELECT comments.*, entries.user_id as entry_owner_id FROM comments JOIN entries ON comments.entry_id = entries.id
   WHERE comments.id IN (%s) AND (entries.private = 0 OR entries.user_id IN (%s))
   ORDER BY comments.created_at DESC LIMIT 10
-""", (comment_ids, friend_ids))
+""", comment_ids, friend_ids)
 
     friends_count = db_fetchone("SELECT COUNT(DISTINCT another) FROM relations WHERE one = %s", current_user_data["id"])["COUNT(DISTINCT another)"]
     
